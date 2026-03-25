@@ -1,2 +1,67 @@
-# Portfolio Website - Samuele Gonnella
-## 20 y/o Junior Fullstack Developer & Trainee EMT based In Milan, Italy
+# Samuele Gonnella
+
+## Hi, I'm Samuele Gonnella 👋
+
+### 🎯 20 year-old Full Stack Developer Student & Tech Enthusiast with strong inclination for IT in healthcare and IoMT (Internet of Medical Things)
+
+### 💻 Projects and Contributions
+
+* **Waterfox Custom Fork (Ongoing):** Currently working on a public fork of the Waterfox browser to create a customized browsing experience. 
+* **ITS Exercise - Technical Writing Snake:** ITS Course Exercise for Technical Writing Practice - Implementation of the **Snake** game ([Snake Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-snake.git)).
+* **ITS Exercise - Technical Writing Trello MVP:** ITS Course Exercise for Technical Writing Practice - Implementation of a **Trello**-inspired **MVP** (Minimum Viable Product) ([MVP Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-mvp-trello.git)). 
+* **Cleaner** - a tool to Unfuck Windows 10 and 11 by removing bloatware and cleaning unused files ([Cleaner](https://github.com/GonnyTech/Cleaner.git)).
+* **Upcoming Project - Croce Verde Baggio Website:** Working on a new version of the website for the volunteer association ["Croce Verde Baggio"](https://www.croceverdebaggio.it/), with custom CSS styling and PHP backend.
+
+I am currently enrolled in the parauniversity course for **Full Stack Developer** at [ITS "Tech Talent Factory"](https://www.itstechtalentfactory.it/), a path that combines my passion for programming with practical experience. I have a science-based academic background, having attended the first year of Computer Science at the University of Milano-Bicocca after graduating from the "Elio Vittorini" Scientific High School.
+
+---
+
+### 🛠️ Technical Skills
+
+Here are the technologies and tools I study and work with:
+
+#### Languages & Development
+* **Python** (Self-taught and through PCTO Course) 
+* **Java**
+* **HTML** basics (Self-taught)
+* **PHP** (Still learning)
+* **GitHub** 
+* **Hardware:** Raspberry Pi, Arduino (Self-taught)
+  
+#### Systems & Tools
+* **Operating Systems:** Microsoft Windows, Linux (Ubuntu-Debian and derivatives, Arch and derivatives, Fedora)
+* **Linux Security:** Basics of **Kali Linux** (Self-taught) 🛡️
+* **3D Modeling:** Autodesk Fusion 360, Autodesk Inventor (with practical experience in a 3D Modeling and Printing PCTO Course)
+* **Media:** DaVinci Resolve, KDEnlive (Video Editing), Audacity (Audio Editing), GIMP and Lightroom Mobile (Photo Editing)
+* **Productivity:** Microsoft Office, LibreOffice, kSuite
+
+---
+
+### 🎓 Education & Other Skills
+
+* **ITS Education:** Attending the first year at [ITS "Tech Talent Factory"](https://www.itstechtalentfactory.it/).
+* **University Education:** I attended (unsuccessfully) the first year of Computer Science at the [University of Milano-Bicocca](https://www.unimib.it).
+* **English Language:** **B2** Level (certified by UniMiB), **B1** Level (Certified by Cambridge University Assessments).
+* **Discipline:** Brown Belt Diploma in Judo.
+* **Hobbies:** Self-taught in musical skills, love for cars and working on them.
+
+---
+  
+### 🤝 Transversal Experiences & Contributions
+
+These experiences demonstrate my **Soft Skills**—crucial for collaboration and professionalism:
+
+* **Customer Care & Problem Solving:** Working as a **waiter/barman** ("Ristorante Cascina Guzzafame") taught me how to **cope with stress** in busy workdays, prioritize tasks, and practice **active listening** and empathy with clients.
+* **Civic Engagement & Teamwork:**
+    * **Trainee Emergency Medical Technician** at the [P.A. Croce Verde Baggio ODV](https://www.croceverdebaggio.it/), a local EMS Association
+    * Volunteer assisting children with disabilities (Social Cooperative ["Il Balzo"](https://www.ilbalzo.com/))
+    * Summer Camp Animator
+    * Love for cars and Special Vehicles. Love for mechatronics and for working to improve things
+
+---
+
+### 📧 Contact
+If you have an interesting project, a collaboration proposal, or just want to chat about Python, Java, or Linux, feel free to contact me:
+
+**Email:** samuelegonnella@etik.com<br>
+**Work Email:** samuele.gonnella@itstechtalentfactory.it
