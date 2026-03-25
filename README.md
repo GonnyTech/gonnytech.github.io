@@ -5,12 +5,11 @@
 ### 🎯 20 year-old Full Stack Developer Student & Tech Enthusiast with strong inclination for IT in healthcare and IoMT (Internet of Medical Things)
 
 ### 💻 Projects and Contributions
-
-* **Waterfox Custom Fork (Ongoing):** Currently working on a public fork of the Waterfox browser to create a customized browsing experience. 
-* **ITS Exercise - Technical Writing Snake:** ITS Course Exercise for Technical Writing Practice - Implementation of the **Snake** game ([Snake Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-snake.git)).
-* **ITS Exercise - Technical Writing Trello MVP:** ITS Course Exercise for Technical Writing Practice - Implementation of a **Trello**-inspired **MVP** (Minimum Viable Product) ([MVP Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-mvp-trello.git)). 
+* **P.A. Croce Verde Baggio Website (Ongoing):** Working on a new version of the website for the volunteer association ["Croce Verde Baggio"](https://www.croceverdebaggio.it/), with custom CSS styling and PHP backend.
+* **Waterfox Custom Fork (Paused):** Currently working on a public fork of the Waterfox browser to create a customized browsing experience. 
+* **ITS Exercise - Technical Writing Snake (Finished):** ITS Course Exercise for Technical Writing Practice - Implementation of the **Snake** game ([Snake Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-snake.git)).
+* **ITS Exercise - Technical Writing Trello MVP (Finished):** ITS Course Exercise for Technical Writing Practice - Implementation of a **Trello**-inspired **MVP** (Minimum Viable Product) ([MVP Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-mvp-trello.git)). 
 * **Cleaner** - a tool to Unfuck Windows 10 and 11 by removing bloatware and cleaning unused files ([Cleaner](https://github.com/GonnyTech/Cleaner.git)).
-* **Upcoming Project - Croce Verde Baggio Website:** Working on a new version of the website for the volunteer association ["Croce Verde Baggio"](https://www.croceverdebaggio.it/), with custom CSS styling and PHP backend.
 
 I am currently enrolled in the parauniversity course for **Full Stack Developer** at [ITS "Tech Talent Factory"](https://www.itstechtalentfactory.it/), a path that combines my passion for programming with practical experience. I have a science-based academic background, having attended the first year of Computer Science at the University of Milano-Bicocca after graduating from the "Elio Vittorini" Scientific High School.
 
@@ -24,6 +23,7 @@ Here are the technologies and tools I study and work with:
 * **Python** (Self-taught and through PCTO Course) 
 * **Java**
 * **HTML** basics (Self-taught)
+* **CSS** basics
 * **PHP** (Still learning)
 * **GitHub** 
 * **Hardware:** Raspberry Pi, Arduino (Self-taught)
