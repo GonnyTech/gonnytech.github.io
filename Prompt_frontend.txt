@@ -1,0 +1,560 @@
+Act as a senior fullstack web engineer. Build a complete multi-page, modular personal portfolio website for Samuele Gonnella.
+Create the following files: index.html, portfolio.html, about.html, css/style.css, css/desktop.css, css/mobile.css.
+All pages must match the wireframes and mockups described below EXACTLY in layout, content, and visual design.
+
+════════════════════════════════════════════════════════════════
+FILE STRUCTURE
+════════════════════════════════════════════════════════════════
+
+/
+├── index.html
+├── portfolio.html
+├── about.html
+├── css/
+│   ├── style.css      → tokens, variables, typography, shared components
+│   ├── desktop.css    → layout rules for screens ≥ 768px only
+│   └── mobile.css     → layout rules for screens < 768px only
+└── img/
+    └── (all images)
+
+Each HTML file must link all three stylesheets in <head> in this order:
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/mobile.css">
+
+════════════════════════════════════════════════════════════════
+CSS ARCHITECTURE
+════════════════════════════════════════════════════════════════
+
+css/style.css — Base, tokens, shared components (NO media queries, NO layout rules):
+  - Google Fonts: Caveat (700), Poppins (700, 400), Nunito (400, 300)
+  - CSS variables:
+      :root {
+        --bg-gradient: linear-gradient(160deg, #1a0038 0%, #2d0060 40%, #1a0038 70%, #0d0030 100%);
+        --card-bg: rgba(80, 0, 160, 0.35);
+        --card-radius: 16px;
+        --navbar-bg: rgba(20, 0, 50, 0.85);
+        --text-primary: #ffffff;
+        --text-secondary: #e0e0e0;
+        --font-logo: 'Caveat', cursive;
+        --font-heading: 'Poppins', sans-serif;
+        --font-body: 'Nunito', sans-serif;
+        --pill-radius: 50px;
+        --section-gap: 3rem;
+        --card-padding: 2rem;
+      }
+  - Global reset: *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  - Body: background var(--bg-gradient), font-family var(--font-body), color var(--text-primary)
+  - Shared: navbar, footer, cards, scroll-row, scroll-card, logo-circle, img-placeholder, fadeInUp animation
+
+css/desktop.css — ALL rules inside @media (min-width: 768px):
+  - Navbar: flex row, logo left, pill buttons right, hamburger hidden
+  - Hero (index): 2-col grid 1fr 1fr, photo right ~280x320px
+  - Who am I (about): 2-col grid 55% / 40%, text left, photo right
+  - Let's keep in touch (about): 2-col grid 40% / 55%, photo left, info right
+  - Project sections (portfolio): 2-col grid 1fr 1fr alternating text/image
+  - Scroll rows: 4 project cards ~220px wide, 3 logo circles ~120px
+  - Footer: single row, left-aligned
+
+css/mobile.css — ALL rules inside @media (max-width: 767px):
+  - Navbar: logo left, hamburger right, pill buttons hidden
+  - All sections: single column, stacked vertically
+  - Photo always above text/content
+  - Project cards ~160px wide, 2 partially visible
+  - Logo circles ~100px
+  - Reduced padding, scaled font sizes
+  - Footer: single column
+
+════════════════════════════════════════════════════════════════
+WIREFRAMES & MOCKUPS — PAGE 1: index.html (HOME)
+════════════════════════════════════════════════════════════════
+
+── DESKTOP WIREFRAME ──────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│  Samuele Gonnella          [Home]  [Portfolio]  [About]     │  ← navbar fixed
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │                                                       │  │
+│  │   Samuele Gonnella          ┌─────────────────────┐   │  │
+│  │                             │                     │   │  │
+│  │   Junior Fullstack          │    hero-photo.jpg   │   │  │
+│  │   Developer with            │                     │   │  │
+│  │   strong inclination        │                     │   │  │
+│  │   for Cars, Special         └─────────────────────┘   │  │
+│  │   Vehicles, Healthcare                                │  │
+│  │   and EMS                                             │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  Projects I worked on:                                      │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │ ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌────────┐   │    │
+│  │ │ img      │ │ img      │ │ img      │ │ img    │   │    │
+│  │ │          │ │          │ │          │ │        │   │    │
+│  │ │ title 1  │ │ title 2  │ │ title 3  │ │title 4 │   │    │
+│  │ └──────────┘ └──────────┘ └──────────┘ └────────┘   │    │
+│  └──────────────────────── scroll ──────────────────┘       │ 
+│                                                             │
+│  Work & Study experiences:                                  │
+│  ┌─────────────────────────────────────────────────────┐    │
+│  │  ┌──────┐      ┌──────┐      ┌──────┐               │    │
+│  │  │  ()  │      │  ()  │      │  ()  │               │    │
+│  │  │logo 1│      │logo 2│      │logo 3│               │    │
+│  │  │label │      │label │      │label │               │    │
+│  │  └──────┘      └──────┘      └──────┘               │    │
+│  └──────────────────────── scroll ──────────────────┘       │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│  Samuele Gonnella                                           │  ← footer
+│  Jr. Fullstack Developer - Trainee EMT                      │
+│  Based in Milano, Italy                                     │
+│  Tel: (+39)348 6090546                                      │
+│  E-mail: samuelegonnella@etik.com                           │
+│  © 2026, Samuele Gonnella | All Rights Reserved.            │
+└─────────────────────────────────────────────────────────────┘
+
+── DESKTOP MOCKUP ─────────────────────────────────────────────
+
+  Background: deep purple-to-indigo gradient (#1a0038 → #2d0060 → #0d0030)
+  Navbar: dark semi-transparent bar, "Samuele Gonnella" in white Caveat cursive left,
+          3 white pill buttons right with dark text (Poppins)
+  Hero card: rounded card rgba(80,0,160,0.35), name in large white Poppins bold,
+             subtitle in lighter weight, photo with rounded corners right side
+  Section titles: white Poppins ~1.8rem, left-aligned, outside cards
+  Project cards: dark purple rounded cards, screenshot image top, white title below
+  Logo circles: white circular background, logo image inside, label below in white
+  Footer: very dark purple #0d0020, white text, small font
+
+── MOBILE WIREFRAME ───────────────────────────────────────────
+
+┌─────────────────────┐
+│ Samuele Gonnella  ≡ │  ← navbar, hamburger right
+└─────────────────────┘
+
+┌─────────────────────┐
+│ ┌─────────────────┐ │
+│ │  hero-photo.jpg │ │  ← photo on top, full width
+│ └─────────────────┘ │
+│                     │
+│  Samuele Gonnella   │
+│  Junior Fullstack   │
+│  Developer...       │
+└─────────────────────┘
+
+┌─────────────────────┐
+│ Projects I worked:  │
+│ ┌──────┐ ┌──────┐   │  ← 2 cards visible, scroll
+│ │ img  │ │ img  │   │
+│ │title │ │title │   │
+│ └──────┘ └──────┘   │
+└─────────────────────┘
+
+┌─────────────────────┐
+│ Work & Study:       │
+│ ┌────┐  ┌────┐      │  ← circles, scroll
+│ │ () │  │ () │      │
+│ │lbl │  │lbl │      │
+│ └────┘  └────┘      │
+└─────────────────────┘
+
+┌─────────────────────┐
+│ Samuele Gonnella    │  ← footer
+│ Jr. Fullstack...    │
+│ Tel: ...            │
+│ © 2026 ...          │
+└─────────────────────┘
+
+── MOBILE MOCKUP ──────────────────────────────────────────────
+
+  Same gradient background, navbar collapses to hamburger icon
+  Photo fills full card width, name and subtitle stack below
+  Cards in horizontal scroll row, ~160px wide each
+  Hamburger opens full-screen overlay:
+  ┌─────────────────────┐
+  │ Samuele Gonnella  X │
+  │                     │
+  │   ┌─────────────┐   │
+  │   │    Home     │   │
+  │   └─────────────┘   │
+  │   ┌─────────────┐   │
+  │   │  Portfolio  │   │
+  │   └─────────────┘   │
+  │   ┌─────────────┐   │
+  │   │    About    │   │
+  │   └─────────────┘   │
+  │                     │
+  └─────────────────────┘
+  Overlay bg: linear-gradient(160deg, #5500cc, #220066)
+
+════════════════════════════════════════════════════════════════
+WIREFRAMES & MOCKUPS — PAGE 2: portfolio.html (PORTFOLIO)
+════════════════════════════════════════════════════════════════
+
+── DESKTOP WIREFRAME ──────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│  Samuele Gonnella          [Home]  [Portfolio]  [About]     │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │                                                       │  │
+│  │               Some projects I Worked on               │  │
+│  │                                                       │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │  Project 1                                            │  │  ← id="project-croce-verde"
+│  │  ┌────────────────────┐   ┌────────────────────────┐  │  │
+│  │  │ text left          │   │  project-croce-verde   │  │  │
+│  │  │                    │   │  .jpg                  │  │  │
+│  │  │                    │   │                        │  │  │
+│  │  └────────────────────┘   └────────────────────────┘  │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │  Project 2                                            │  │  ← id="project-diary"
+│  │  ┌────────────────────┐   ┌────────────────────────┐  │  │
+│  │  │ project-diary      │   │  text right            │  │  │
+│  │  │ -app.jpg           │   │                        │  │  │
+│  │  │                    │   │                        │  │  │
+│  │  └────────────────────┘   └────────────────────────┘  │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │  Project 3                                            │  │  ← id="project-snake"
+│  │  ┌────────────────────┐   ┌────────────────────────┐  │  │
+│  │  │ text left          │   │  project-snake.jpg     │  │  │
+│  │  │                    │   │                        │  │  │
+│  │  └────────────────────┘   └────────────────────────┘  │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │  Project 4                                            │  │  ← id="project-windows"
+│  │  ┌────────────────────┐   ┌────────────────────────┐  │  │
+│  │  │ project-windows    │   │  text right            │  │  │
+│  │  │ -cleaner.jpg       │   │                        │  │  │
+│  │  └────────────────────┘   └────────────────────────┘  │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│  footer                                                     │
+└─────────────────────────────────────────────────────────────┘
+
+── DESKTOP MOCKUP ─────────────────────────────────────────────
+
+  Hero banner: large centered white text on rounded purple card
+  Project sections: alternating 2-col grid inside rounded purple cards
+  Odd (1,3): heading + body text LEFT | screenshot image RIGHT
+  Even (2,4): screenshot image LEFT | heading + body text RIGHT
+  Images: border-radius 16px, max-width ~300px, object-fit cover
+  Text: heading Poppins bold ~2rem white, body Nunito ~1rem #e0e0e0 justified
+
+── MOBILE WIREFRAME ───────────────────────────────────────────
+
+┌─────────────────────┐
+│ Samuele Gonnella  ≡ │
+└─────────────────────┘
+┌─────────────────────┐
+│  Some projects I    │
+│  Worked on          │
+└─────────────────────┘
+┌─────────────────────┐
+│  Project 1          │
+│  ┌───────────────┐  │  ← image always on top on mobile
+│  │ project img   │  │
+│  └───────────────┘  │
+│  text below         │
+└─────────────────────┘
+┌─────────────────────┐
+│  Project 2          │
+│  ┌───────────────┐  │
+│  │ project img   │  │
+│  └───────────────┘  │
+│  text below         │
+└─────────────────────┘
+... (same for 3 and 4)
+┌─────────────────────┐
+│  footer             │
+└─────────────────────┘
+
+════════════════════════════════════════════════════════════════
+WIREFRAMES & MOCKUPS — PAGE 3: about.html (ABOUT)
+════════════════════════════════════════════════════════════════
+
+── DESKTOP WIREFRAME ──────────────────────────────────────────
+
+┌─────────────────────────────────────────────────────────────┐
+│  Samuele Gonnella          [Home]  [Portfolio]  [About]     │
+└─────────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────────┐
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │                                                       │  │
+│  │                    About Me                           │  │
+│  │                                                       │  │
+│  │    Junior Fullstack Web Developer with strong         │  │
+│  │    inclination for Cars, Special Vehicles,            │  │
+│  │    Healthcare and EMS                                 │  │
+│  │                                                       │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │  Who am I?                                            │  │
+│  │                                                       │  │
+│  │  ┌──────────────────────────┐  ┌─────────────────┐    │  │
+│  │  │ I graduated from the     │  │                 │    │  │
+│  │  │ "Elio Vittorini"...      │  │  about-photo    │    │  │
+│  │  │                          │  │  .jpg           │    │  │
+│  │  │ This transition is       │  │                 │    │  │
+│  │  │ motivated by my desire...│  └─────────────────┘    │  │
+│  │  └──────────────────────────┘                         │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+│  ┌───────────────────────────────────────────────────────┐  │
+│  │  Let's keep in touch!                                 │  │
+│  │                                                       │  │
+│  │  ┌─────────────────┐  ┌──────────────────────────┐    │  │
+│  │  │                 │  │  Name: Samuele            │   │  │
+│  │  │  contact-photo  │  │  Surname: Gonnella        │   │  │
+│  │  │  .jpg           │  │                           │   │  │
+│  │  │                 │  │  Mail: ...@etik.com       │   │  │
+│  │  └─────────────────┘  │  Phone: (+39)348 6090546  │   │  │
+│  │                       │  Company:                 │   │  │
+│  │                       │  Social:                  │   │  │
+│  │                       │                           │   │  │
+│  │                       │  Link to CV:              │   │  │
+│  │                       └──────────────────────────┘    │  │
+│  └───────────────────────────────────────────────────────┘  │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│  footer                                                     │
+└─────────────────────────────────────────────────────────────┘
+
+── DESKTOP MOCKUP ─────────────────────────────────────────────
+
+  Hero: large centered "About Me" white Poppins ~4rem on purple card,
+        subtitle below ~1.2rem #e0e0e0 centered
+  Who am I: purple card, heading Poppins bold left ~2.5rem,
+            text left 55% Nunito justified #e0e0e0,
+            photo right 40% border-radius 16px
+  Let's keep in touch: purple card, heading Poppins bold ~2.5rem,
+                       photo left 40% border-radius 16px,
+                       contact info right Nunito ~1rem #e0e0e0,
+                       each field on its own line with blank lines as spacers
+
+── MOBILE WIREFRAME ───────────────────────────────────────────
+
+┌─────────────────────┐
+│ Samuele Gonnella  ≡ │
+└─────────────────────┘
+┌─────────────────────┐
+│      About Me       │
+│  Junior Fullstack   │
+│  Developer...       │
+└─────────────────────┘
+┌─────────────────────┐
+│  Who am I?          │
+│  ┌───────────────┐  │  ← photo on top
+│  │ about-photo   │  │
+│  └───────────────┘  │
+│  I graduated from   │
+│  the "Elio          │
+│  Vittorini"...      │
+└─────────────────────┘
+┌─────────────────────┐
+│  Let's keep         │
+│  in touch!          │
+│  ┌───────────────┐  │  ← photo on top
+│  │ contact-photo │  │
+│  └───────────────┘  │
+│  Name: Samuele      │
+│  Surname: Gonnella  │
+│  Mail: ...          │
+│  Phone: ...         │
+│  Company:           │
+│  Social:            │
+│  Link to CV:        │
+└─────────────────────┘
+┌─────────────────────┐
+│  footer             │
+└─────────────────────┘
+
+── MOBILE MOCKUP ──────────────────────────────────────────────
+
+  Same gradient background throughout
+  All sections single column, full width
+  Photos fill full card width, max-width 300px centered
+  Text justified, Nunito light
+  Contact info: each entry on its own line, blank lines as visual spacers
+
+════════════════════════════════════════════════════════════════
+PAGE CONTENT
+════════════════════════════════════════════════════════════════
+
+── index.html ─────────────────────────────────────────────────
+
+Hero:
+  Heading: "Samuele Gonnella"
+  Subtitle: "Junior Fullstack Developer with strong inclination for Cars,
+             Special Vehicles, Healthcare and EMS"
+  Photo: img/hero-photo.jpg
+
+Projects scroll row:
+  1. img/project-croce-verde.jpg    → "Association Web Portal with form - Croce Verde Baggio"
+                                       → links to portfolio.html#project-croce-verde
+  2. img/project-diary-app.jpg      → "Volunteer Diary Android App - Croce Verde Baggio"
+                                       → links to portfolio.html#project-diary
+  3. img/project-snake.jpg          → "Snake Game - ITS Tech Talent Factory"
+                                       → links to portfolio.html#project-snake
+  4. img/project-windows-cleaner.jpg → "Windows Cleaner - personal"
+                                       → links to portfolio.html#project-windows
+
+Experiences scroll row:
+  1. img/logo-ttf.png          → "Jr. Fullstack Developer - Student"
+  2. img/logo-sege.png         → "Jr. Fullstack Developer - Intern"
+  3. img/logo-croce-verde.png  → "Trainee EMT - Volunteer"
+  3. img/logo-unimib.png       → "Computer Science - 1st Year"
+
+
+── portfolio.html ─────────────────────────────────────────────
+
+Hero: "Some projects I Worked on"
+
+Project 1 — id="project-croce-verde" — text LEFT, image RIGHT:
+  Heading: "Web Portal - Croce Verde Baggio"
+  Text: "Institutional web portal for the local EMS Station, P.A. Croce Verde Baggio ODV.
+         I started from a monolithic HTML site, fully redesigned, improved and converted it
+         into a dynamic, PHP-based, fully responsive, WCAG 2.1 AA and W3C compliant website,
+         complete with admin pages and backend, no-code maintenance custom CSS styling and
+         responsive tiling."
+  Image: img/project-croce-verde.jpg
+
+Project 2 — id="project-diary" — image LEFT, text RIGHT:
+  Heading: "Volunteer Diary - Croce Verde Baggio"
+  Text: "Advanced On-Scene Time Calculator and tracker Android app.
+         I started by building a modern, Material 3-inspired Time Calculator in Kotlin to solve
+         a real problem: the need of knowing exactly how much time I spend on-scene during an
+         ambulance call, in order to keep track with the minimum time required to pass the
+         regional exam while remaining focused on the scene and on the patient.
+         I then started adding features like crew tracking, digital signature, real time counter,
+         service history and sharing, alongside dark/light theme and 'Trainee Mode' on/off toggles"
+  Image: img/project-diary-app.jpg
+
+Project 3 — id="project-snake" — text LEFT, image RIGHT:
+  Heading: "Snake Game - ITS TTF"
+  Text: "A clone of the famous 1980s game “Snake”, born as an exercise during Tech Writing course 
+        at ITS Tech Talent Factory.
+        It was meant to show us how the Software Development Cycle of something simple like a small Snake 
+        game implies many hours of careful teamwork and attention to every detail, by teaching us the 
+        importance of Docs-As-Code and deployment manuals."
+  Image: img/project-snake.jpg
+  Link to GitHub repo: https://github.com/TTF-FULL-STACK-2025/technical-writing-snake.git (Button style with 'Here' text)
+
+
+Project 4 — id="project-windows" — image LEFT, text RIGHT:
+  Heading: "Windows Cleaner - personal"
+  Text: "A tool designed to un-bloat Windows 10/11.
+         It started from two scripts: one for debloating and one for ordinary maintenance.
+         It then evolved in a fully featured Windows Maintenance App.
+         It can empty the Trash Bin, removes temporary files, removes unnecessary folders and
+         undesired spyware from your computer. It can be programmed to run automatically or
+         can be used to do ordinary maintenance on your hardware."
+  Image: img/project-windows-cleaner.jpg
+  Link to GitHub repo: https://github.com/GonnyTech/Cleaner.git (Button style with 'Here' text)
+
+
+── about.html ─────────────────────────────────────────────────
+
+Hero:
+  Heading: "About Me"
+  Subtitle: "Junior Fullstack Web Developer with strong inclination for Cars,
+             Special Vehicles, Healthcare and EMS"
+
+Who am I? — text LEFT, photo RIGHT (desktop) / photo TOP (mobile):
+  Photo: img/about-photo.jpg
+  Text (justified):
+    "I graduated from the "Elio Vittorini" State Scientific High School. After a training
+     experience at the University of Milan-Bicocca, I chose to direct my training towards
+     the Full Stack Developer course provided by ITS 'Tech Talent Factory'.
+
+     This transition is motivated by my desire to combine the analytical rigor developed in
+     scientific studies with intensive technical and practical application. My goal is to
+     develop quickly gain a solid base of operational and problem-solving skills, essential
+     to effectively address technological challenges and contribute concretely to company
+     projects."
+
+Let's keep in touch! — photo LEFT (desktop) / photo TOP (mobile):
+  Photo: img/contact-photo.jpg
+  Contact info:
+    Name: Samuele
+    Surname: Gonnella
+
+    Mail: samuelegonnella@etik.com
+    Phone: (+39)348 6090546
+    Company: ITS Tech Talent Factory
+    Social: www.linkedin.com/in/samuele-gonnella ('My profile' LinkedIn Link with Icon - Button Style)
+    
+    My GitHub profile: https://github.com/GonnyTech ('My CV on GitHub' GitHub Link with Icon - Button Style) 
+    Link to CV: (link to direct download of docs/CV.pdf - button with "Download PDF") 
+
+Footer (all pages):
+  Samuele Gonnella
+  Jr. Fullstack Developer - Trainee EMT
+  Based in Milano, Italy
+  Tel: (+39)348 6090546
+  E-mail: samuelegonnella@etik.com
+
+  © 2026, Samuele Gonnella | All Rights Reserved.
+
+════════════════════════════════════════════════════════════════
+IMAGE PATHS & FALLBACK
+════════════════════════════════════════════════════════════════
+
+  img/hero-photo.jpg           → Samuele in EMT uniform, ambulance background
+  img/about-photo.jpg          → portrait, glasses, white background
+  img/contact-photo.jpg        → Samuele in EMT uniform (same as hero-photo.jpg, slightly different angle)
+  img/project-croce-verde.jpg  → Croce Verde web portal screenshot
+  img/project-diary-app.jpg    → Volunteer Diary Android app screenshot (dark UI)
+  img/project-snake.jpg        → Snake game screenshot (green on black)
+  img/project-windows-cleaner.jpg → Windows Cleaner app screenshot
+  img/logo-ttf.png             → ITS Tech Talent Factory logo (white bg)
+  img/logo-sege.png            → SEGE logo (white bg)
+  img/logo-croce-verde.png     → Croce Verde Baggio 1911 logo (white bg)
+
+Every <img> tag must use this fallback pattern:
+  <img src="img/filename.jpg" alt="description"
+       onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+  <div class="img-placeholder" style="display:none;">foto non trovata</div>
+
+════════════════════════════════════════════════════════════════
+TECHNICAL REQUIREMENTS
+════════════════════════════════════════════════════════════════
+  - Adherence to Clean Code principles: write readable, self-documenting, and well-commented code to ensure long-term maintainability
+  - Docs-As-Code: Create all the code Technical Docs alongside the code itself (markdown format).
+  - Production-ready code: strictly following DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principles.
+  - Code Quality & Documentation: intuitive naming conventions, modular CSS structure, and comprehensive commenting for rapid developer onboarding and debugging
+  - Code Modularity: Easy maintenance for scalability and possibility to add projects/companies in future
+  - style.css: zero media queries, only variables, resets, shared components
+  - desktop.css: ALL rules inside @media (min-width: 768px) { }
+  - mobile.css: ALL rules inside @media (max-width: 767px) { }
+  - No external CSS frameworks (no Bootstrap, no Tailwind)
+  - Hamburger menu: pure vanilla JS toggle, no libraries
+  - Horizontal scroll rows:
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    + .scroll-card { scroll-snap-align: start; }
+    + ::-webkit-scrollbar { display: none; }
+  - Page load animation: @keyframes fadeInUp in style.css, .fade-in on main sections
+  - All inter-page links relative and functional
+  - Valid semantic HTML5: <nav>, <main>, <section>, <footer>, <article>
+  - Project cards on index.html clickable, linking to portfolio.html#anchor
+  - Ensure high color contrast between text and purple backgrounds, and add aria-labels to the social buttons and hamburger menu (WCAG 2.1 AA and W3C compliant).
+
+Deliver: index.html, portfolio.html, about.html, css/style.css, css/desktop.css, css/mobile.css, README.md, /img/ (folder), /docs/ (folder).
+         Ready to deploy as static files with no build step required.
