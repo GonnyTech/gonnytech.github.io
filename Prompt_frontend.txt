@@ -1,6 +1,6 @@
 Act as a senior fullstack web engineer. Build a complete multi-page, modular personal portfolio website for Samuele Gonnella.
-Create the following files: index.html, portfolio.html, about.html, css/style.css, css/desktop.css, css/mobile.css.
-All pages must match the wireframes and mockups described below EXACTLY in layout, content, and visual design.
+Create the following files: index.html, portfolio.html, about.html, css/style.css, css/desktop.css, css/mobile.css docs/README.md, docs/PRD.md, docs/CONFORMITY.md, docs/STRUCTURE.md.
+All HTML and CSS pages must match the wireframes and mockups described below EXACTLY in layout, content, and visual design.
 
 ════════════════════════════════════════════════════════════════
 FILE STRUCTURE
@@ -14,6 +14,7 @@ FILE STRUCTURE
 │   ├── style.css      → tokens, variables, typography, shared components
 │   ├── desktop.css    → layout rules for screens ≥ 768px only
 │   └── mobile.css     → layout rules for screens < 768px only
+├── docs/
 └── img/
     └── (all images)
 
@@ -533,7 +534,7 @@ Every <img> tag must use this fallback pattern:
 TECHNICAL REQUIREMENTS
 ════════════════════════════════════════════════════════════════
   - Adherence to Clean Code principles: write readable, self-documenting, and well-commented code to ensure long-term maintainability
-  - Docs-As-Code: Create all the code Technical Docs alongside the code itself (markdown format).
+  - Docs-As-Code: Create all the code Technical Docs alongside the code itself (PRD, CONFORMITY, HISTORY and STRUCTURE markdown formatted files)
   - Production-ready code: strictly following DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid) principles.
   - Code Quality & Documentation: intuitive naming conventions, modular CSS structure, and comprehensive commenting for rapid developer onboarding and debugging
   - Code Modularity: Easy maintenance for scalability and possibility to add projects/companies in future
@@ -555,6 +556,7 @@ TECHNICAL REQUIREMENTS
   - Valid semantic HTML5: <nav>, <main>, <section>, <footer>, <article>
   - Project cards on index.html clickable, linking to portfolio.html#anchor
   - Ensure high color contrast between text and purple backgrounds, and add aria-labels to the social buttons and hamburger menu (WCAG 2.1 AA and W3C compliant).
+  - For contcats info that are missing you can rely on the already inside the folder README.md file. After you're done, rename README.md to CV.md 
 
-Deliver: index.html, portfolio.html, about.html, css/style.css, css/desktop.css, css/mobile.css, README.md, /img/ (folder), /docs/ (folder).
+Deliver: index.html, portfolio.html, about.html, css/style.css, css/desktop.css, css/mobile.css, NEW_README.md, /img/ (folder), /docs/ (folder) with docs inside.
          Ready to deploy as static files with no build step required.
