@@ -2,6 +2,7 @@ You are a senior fullstack web engineer. Build a complete multi-page personal po
 Create the following files: index.html, portfolio.html, about.html, project-website.html, project-app.html,
 project-snake.html, project-winapp.html, css/style.css, css/desktop.css, css/mobile.css, docs/CONFORMITY.md, docs/STRUCTURE.md, docs/PRD.md.
 All pages MUST match the wireframes and mockups described below and inside project's folder EXACTLY in layout, content, and visual design.
+Comments and Docs MUST be in plain, correct English with proper formatting.
 
 ════════════════════════════════════════════════════════════════
 FILE STRUCTURE
@@ -15,9 +16,9 @@ FILE STRUCTURE
 ├── project-app.html
 ├── project-snake.html
 ├── project-winapp.html
+│
 ├── docs/
 │   └── (all docs)
-│
 ├── css/
 │   ├── style.css      → tokens, variables, typography, shared components
 │   ├── desktop.css    → layout rules for screens ≥ 768px only
@@ -375,9 +376,9 @@ WIREFRAMES & MOCKUPS — PAGE 1: index.html (HOME)
 └─────────────────────┘
 Overlay bg: linear-gradient(160deg, #5500cc, #220066)
 
-════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 WIREFRAMES & MOCKUPS — PAGE 2: portfolio.html (PORTFOLIO)
-════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 
 ── DESKTOP WIREFRAME ──────────────────────────────────────────
 
@@ -467,9 +468,9 @@ WIREFRAMES & MOCKUPS — PAGE 2: portfolio.html (PORTFOLIO)
   Tapping anywhere on the card navigates to the detail page. NO full paragraph in this page.
   On desktop, the full text is shown inline as before (no linking to detail pages).
 
-════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 WIREFRAMES & MOCKUPS — PAGE 3: about.html (ABOUT)
-════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 
 ── DESKTOP WIREFRAME ──────────────────────────────────────────
 
@@ -546,9 +547,9 @@ WIREFRAMES & MOCKUPS — PAGE 3: about.html (ABOUT)
 │  footer             │
 └─────────────────────┘
 
-════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 PAGE CONTENT
-════════════════════════════════════════════════════════════════
+═══════════════════════════════════════════════════════════════
 
 ── index.html ─────────────────────────────────────────────────
 
@@ -759,3 +760,15 @@ Deliver: index.html, portfolio.html, about.html, project-website.html, project-a
          project-snake.html, project-winapp.html, css/style.css, css/desktop.css, css/mobile.css,
          NEW_README.md, /img/ (folder), /docs/ (folder) with docs inside.
          Ready to deploy as static files with no build step required.
+
+  Delivering Phases (ASK user to review code and files generated during EACH phase):
+    - Phase 1: Create missing folders, check exixting files, look at exixsting wireframes and mockups, prepare IDE to write code;
+    - Phase 2: Start by creating docs/NEW_README.md, index.html, portfolio.html and about.html files, css/style.css and css/desktop.css;
+    if needed, please start by creatig index.hml and css/style.css, ASK for user's approval and THEN follow up with the remainig files. 
+    ASK user to try every page and validate the output;
+    - Phase 3: Create html files for each project according to the mockups you can find in the project's folder AND THEN create the css/mobile.css file.
+    ASK user to try and validate the output and IF NECESSARY adjust accordingly;
+    - Phase 4: Prompt the user to test the output ONCE AGAIN and THEN, IF AND ONLY IF the user confirms the output, 
+    ASK the user to proceed with W3C tests and WCAG tests manually;
+    - Phase 5: Wait for the users replies and THEN write docs/STRUCTURE.md and docs/CONFORMITY.md;
+    - Phase 6: ASK the user to review the files you wrote and to sign the newly created .md files
