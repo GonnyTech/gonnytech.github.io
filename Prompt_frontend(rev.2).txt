@@ -598,7 +598,8 @@ Project 1 — id="project-croce-verde":
      I started from a monolithic HTML file and I fully redesigned, improved and converted
      it into a dynamic, PHP-based, fully responsive, WCAG 2.1 AA and W3C compliant custom
      website with admin pages and backend, no-code maintenance custom CSS styling and
-     responsive tiling."
+     responsive tiling.
+     To try it out or have a look head [Link Button Here -> www.croceverdebaggio.it]"
   Image: img/project-croce-verde.jpg
 
 Project 2 — id="project-diary":
@@ -771,4 +772,4 @@ Deliver: index.html, portfolio.html, about.html, project-website.html, project-a
     - Phase 4: Prompt the user to test the output ONCE AGAIN and THEN, IF AND ONLY IF the user confirms the output, 
     ASK the user to proceed with W3C tests and WCAG tests manually;
     - Phase 5: Wait for the users replies and THEN write docs/STRUCTURE.md and docs/CONFORMITY.md;
-    - Phase 6: ASK the user to review the files you wrote and to sign the newly created .md files
+    - Phase 6: ASK the user to review the files you wrote and to sign the newly created .md files.
