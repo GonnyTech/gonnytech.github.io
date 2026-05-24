@@ -5,7 +5,7 @@
 ### 🎯 20 year-old Full Stack Developer Student & Tech Enthusiast with strong inclination for IT in healthcare and IoMT (Internet of Medical Things)
 
 ### 💻 Projects and Contributions
-* **P.A. Croce Verde Baggio Website (Released on 2026-05-24):** New version of the website for the volunteer association "Croce Verde Baggio" [(link to visit)](https://www.croceverdebaggio.it/), with custom CSS styling and PHP backend.
+* **P.A. Croce Verde Baggio Website (Released on 2026-05-24):** New version of the website for the volunteer association "Croce Verde Baggio" ([link to visit])(https://www.croceverdebaggio.it/), with custom CSS styling and PHP backend.
 * **Waterfox Custom Fork (Paused):** Currently working on a public fork of the Waterfox browser to create a customized browsing experience. 
 * **ITS Exercise - Technical Writing Snake (Finished):** ITS Course Exercise for Technical Writing Practice - Implementation of the **Snake** game ([Snake Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-snake.git)).
 * **ITS Exercise - Technical Writing Trello MVP (Finished):** ITS Course Exercise for Technical Writing Practice - Implementation of a **Trello**-inspired **MVP** (Minimum Viable Product) ([MVP Repository](https://github.com/TTF-FULL-STACK-2025/technical-writing-mvp-trello.git)). 
