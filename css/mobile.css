@@ -1,0 +1,178 @@
+@media (max-width: 767.98px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .navbar {
+    height: 64px;
+    padding: 0 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.55rem;
+    line-height: 1;
+    max-width: calc(100% - 64px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-btn {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 auto;
+  }
+
+  .nav-overlay {
+    padding: 1.25rem;
+  }
+
+  .nav-overlay .nav-logo {
+    font-size: 1.9rem;
+    max-width: calc(100% - 56px);
+  }
+
+  .overlay-menu {
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .overlay-item a {
+    font-size: 1.35rem;
+    padding: 0.9rem 1.25rem;
+  }
+
+  .container {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .hero-banner {
+    margin-top: 84px;
+    padding: 1.25rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.08;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-photo-container {
+    margin-top: 1.25rem;
+    border-radius: var(--card-radius);
+    overflow: hidden;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .scroll-row {
+    gap: 12px;
+    padding-bottom: 0.75rem;
+  }
+
+  .scroll-card {
+    width: min(84vw, 320px);
+  }
+
+  .scroll-card-content {
+    padding: 1rem;
+  }
+
+  .scroll-card-title {
+    font-size: 0.95rem;
+  }
+
+  .logo-circle {
+    width: 92px;
+    height: 92px;
+  }
+
+  .logo-label {
+    max-width: 120px;
+    font-size: 0.82rem;
+  }
+
+  .about-hero,
+  .portfolio-title-hero,
+  .project-detail-hero {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  .about-grid-who,
+  .about-grid-contact,
+  .portfolio-card-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-photo-wrapper,
+  .portfolio-image-wrapper,
+  .project-detail-image-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .portfolio-card-grid {
+    gap: 1rem;
+  }
+
+  .portfolio-text h2 {
+    font-size: 1.45rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .portfolio-text p,
+  .project-detail-body {
+    font-size: 1rem;
+  }
+
+  .btn-style,
+  .btn-secondary-style {
+    width: 100%;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-only {
+    display: block !important;
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-copyright {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+
+  .nav-logo {
+    font-size: 1.35rem;
+  }
+
+  .scroll-card {
+    width: 86vw;
+  }
+
+  .overlay-item a {
+    font-size: 1.2rem;
+  }
+}

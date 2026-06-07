@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuele Gonnella - Portfolio</title>
+  <meta name="description" content="Personal portfolio of Samuele Gonnella, Junior Fullstack Web Developer and Trainee EMT. Showcasing web applications, Android development, and tech stack.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+
+  <!-- Header & Navbar -->
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo">Samuele Gonnella</a>
+      
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+        <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+        &#9776;
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Hamburger Overlay Menu -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+      <span class="nav-logo" style="font-size: 2.2rem;">Samuele Gonnella</span>
+      <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">
+        &#10005;
+      </button>
+    </div>
+    <ul class="overlay-menu">
+      <li class="overlay-item"><a href="index.html" class="active">Home</a></li>
+      <li class="overlay-item"><a href="portfolio.html">Portfolio</a></li>
+      <li class="overlay-item"><a href="about.html">About</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container fade-in">
+    
+    <!-- Hero Banner Card -->
+    <section class="hero-banner" aria-label="Introduction">
+      <div class="hero-text">
+        <h1 class="hero-title">Samuele Gonnella</h1>
+        <p class="hero-subtitle">Junior Fullstack Developer with strong inclination for Cars, Special Vehicles, Healthcare and EMS</p>
+      </div>
+      <div class="hero-photo-container">
+        <img src="img/48.jpg" alt="Samuele Gonnella in EMT uniform with an ambulance in the background"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">Samuele EMT</div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section aria-labelledby="projects-heading">
+      <h2 class="section-title" id="projects-heading">Projects I worked on:</h2>
+      <div class="scroll-row">
+        
+        <!-- Project 1 -->
+        <a class="scroll-card" data-desktop-href="portfolio.html#project-croce-verde" data-mobile-href="project-website.html" href="portfolio.html#project-croce-verde">
+          <div class="scroll-card-img-wrapper">
+              <img src="img/cvb-website.jpeg" alt="Screenshot of the Croce Verde Baggio Web Portal"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Croce Verde Web</div>
+          </div>
+          <div class="scroll-card-content">
+            <h3 class="scroll-card-title">Association Web Portal with form - Croce Verde Baggio</h3>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a class="scroll-card" data-desktop-href="portfolio.html#project-diary" data-mobile-href="project-app.html" href="portfolio.html#project-diary">
+          <div class="scroll-card-img-wrapper">
+            <img src="img/project-diary-app.jpg" alt="Screenshot of the Volunteer Diary Android App"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Volunteer Diary App</div>
+          </div>
+          <div class="scroll-card-content">
+            <h3 class="scroll-card-title">Volunteer Diary Android App - Croce Verde Baggio</h3>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a class="scroll-card" data-desktop-href="portfolio.html#project-snake" data-mobile-href="project-snake.html" href="portfolio.html#project-snake">
+          <div class="scroll-card-img-wrapper">
+            <img src="img/project-snake.jpg" alt="Screenshot of the Snake game"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Snake Game</div>
+          </div>
+          <div class="scroll-card-content">
+            <h3 class="scroll-card-title">Snake Game - ITS Tech Talent Factory</h3>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a class="scroll-card" data-desktop-href="portfolio.html#project-windows" data-mobile-href="project-winapp.html" href="portfolio.html#project-windows">
+          <div class="scroll-card-img-wrapper">
+              <img src="img/winapp.png" alt="Screenshot of the Windows Cleaner personal tool"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Windows Cleaner</div>
+          </div>
+          <div class="scroll-card-content">
+            <h3 class="scroll-card-title">Windows Cleaner - personal</h3>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section aria-labelledby="experiences-heading">
+      <h2 class="section-title" id="experiences-heading">Work & Study experiences:</h2>
+      <div class="scroll-row">
+        
+        <!-- Experience 1 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-ttf.png" alt="Tech Talent Factory Logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">TTF</div>
+          </div>
+          <div class="logo-label">Jr. Fullstack Developer - Student</div>
+        </div>
+
+        <!-- Experience 2 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-sege.png" alt="SEGE Logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">SEGE</div>
+          </div>
+          <div class="logo-label">Jr. Fullstack Developer - Intern</div>
+        </div>
+
+        <!-- Experience 3 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-croce-verde.png" alt="Croce Verde Baggio 1911 Logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Croce Verde</div>
+          </div>
+          <div class="logo-label">Trainee EMT - Volunteer</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section aria-labelledby="tech-heading">
+      <h2 class="section-title" id="tech-heading">Technologies I can Work With:</h2>
+      <div class="scroll-row">
+        
+        <!-- Tech 1 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-java.png" alt="Java logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Java</div>
+          </div>
+          <div class="logo-label">Java</div>
+        </div>
+
+        <!-- Tech 2 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-php.png" alt="PHP logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">PHP</div>
+          </div>
+          <div class="logo-label">PHP</div>
+        </div>
+
+        <!-- Tech 3 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-html.png" alt="HTML logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">HTML</div>
+          </div>
+          <div class="logo-label">HTML</div>
+        </div>
+
+        <!-- Tech 4 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-css.png" alt="CSS3 logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">CSS3</div>
+          </div>
+          <div class="logo-label">CSS3</div>
+        </div>
+
+        <!-- Tech 5 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-javascript.png" alt="JavaScript logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">JavaScript</div>
+          </div>
+          <div class="logo-label">JavaScript</div>
+        </div>
+
+        <!-- Tech 6 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-python.png" alt="Python logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Python</div>
+          </div>
+          <div class="logo-label">Python</div>
+        </div>
+
+        <!-- Tech 7 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-mysql.png" alt="MySQL logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">MySQL</div>
+          </div>
+          <div class="logo-label">MySQL</div>
+        </div>
+
+        <!-- Tech 8 -->
+        <div class="logo-circle-wrapper">
+          <div class="logo-circle">
+            <img src="img/logo-linux.png" alt="Linux logo"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Linux</div>
+          </div>
+          <div class="logo-label">Linux</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">Samuele Gonnella</div>
+        <p class="footer-subtitle">Jr. Fullstack Developer - Trainee EMT</p>
+        <p>Based in Milano, Italy</p>
+      </div>
+      <div class="footer-contacts-column">
+        <p class="footer-info">
+          <strong>Tel:</strong> (+39)348 6090546<br>
+          <strong>E-mail:</strong> samuelegonnella@etik.com
+        </p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <span>&copy; 2026, Samuele Gonnella | All Rights Reserved.</span>
+      <a href="LICENSE" class="btn-license" aria-label="See License terms">See License</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // 1. Hamburger menu toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeOverlayBtn = document.getElementById('close-overlay-btn');
+    const navOverlay = document.getElementById('nav-overlay');
+    const overlayLinks = document.querySelectorAll('.overlay-item a');
+
+    function openMenu() {
+      navOverlay.classList.add('open');
+      navOverlay.setAttribute('aria-hidden', 'false');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      navOverlay.classList.remove('open');
+      navOverlay.setAttribute('aria-hidden', 'true');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburgerBtn.addEventListener('click', openMenu);
+    closeOverlayBtn.addEventListener('click', closeMenu);
+    overlayLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // 2. Dynamic project card hrefs
+    function updateProjectLinks() {
+      const isMobile = window.innerWidth < 768;
+      document.querySelectorAll('[data-desktop-href][data-mobile-href]')
+        .forEach(el => {
+          el.href = isMobile ? el.dataset.mobileHref : el.dataset.desktopHref;
+        });
+    }
+    window.addEventListener('load', updateProjectLinks);
+    window.addEventListener('resize', updateProjectLinks);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuele Gonnella - Snake Game</title>
+  <meta name="description" content="Details about the Snake Game project by Samuele Gonnella.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo">Samuele Gonnella</a>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html">Home</a></li>
+        <li class="nav-item"><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+      </ul>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">&#9776;</button>
+    </nav>
+  </header>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+      <span class="nav-logo" style="font-size: 2.2rem;">Samuele Gonnella</span>
+      <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">&#10005;</button>
+    </div>
+    <ul class="overlay-menu">
+      <li class="overlay-item"><a href="index.html">Home</a></li>
+      <li class="overlay-item"><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li class="overlay-item"><a href="about.html">About</a></li>
+    </ul>
+  </div>
+
+  <main class="container fade-in">
+    <section class="project-detail-hero">
+      <h1 class="project-detail-title">Snake Game</h1>
+      <div class="project-detail-image-container">
+        <img src="img/project-snake.jpg" alt="Snake game screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="img-placeholder" style="display:none;">Snake Game</div>
+      </div>
+    </section>
+
+    <section class="card project-detail-body">
+      <p>
+        A clone of the classic Snake game, developed as an exercise during the Tech Writing course at ITS Tech Talent Factory.
+      </p>
+      <p>
+        The project was used to practice teamwork, documentation and deployment workflows through a small but complete software lifecycle.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;">
+        <a class="btn-secondary-style" href="portfolio.html">Back to Portfolio</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">Samuele Gonnella</div>
+        <p class="footer-subtitle">Jr. Fullstack Developer - Trainee EMT</p>
+        <p>Based in Milano, Italy</p>
+      </div>
+      <div class="footer-contacts-column">
+        <p class="footer-info">
+          <strong>Tel:</strong> (+39)348 6090546<br>
+          <strong>E-mail:</strong> samuelegonnella@etik.com
+        </p>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <span>&copy; 2026, Samuele Gonnella | All Rights Reserved.</span>
+      <a href="LICENSE" class="btn-license" aria-label="See License terms">See License</a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeOverlayBtn = document.getElementById('close-overlay-btn');
+    const navOverlay = document.getElementById('nav-overlay');
+
+    function openMenu() {
+      navOverlay.classList.add('open');
+      navOverlay.setAttribute('aria-hidden', 'false');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMenu() {
+      navOverlay.classList.remove('open');
+      navOverlay.setAttribute('aria-hidden', 'true');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    hamburgerBtn.addEventListener('click', openMenu);
+    closeOverlayBtn.addEventListener('click', closeMenu);
+  </script>
+
+</body>
+</html>
