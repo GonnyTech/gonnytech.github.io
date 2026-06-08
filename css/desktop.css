@@ -187,4 +187,13 @@
     align-items: flex-end;
     text-align: right;
   }
+
+  /* Visibility Helpers */
+  .mobile-only {
+    display: none !important;
+  }
+
+  .desktop-only {
+    display: block !important;
+  }
 }
