@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&family=League+Gothic&family=Just+Me+Again+Down+Here&display=swap');
+
+/* ============================================================
+   CUSTOM FONT FAMILY DEFINITIONS
+   ============================================================ */
+:root {
+    --font-logo: 'Just Me Again Down Here', cursive;
+    --font-heading: 'League Gothic', sans-serif;
+    --font-body: 'JetBrains Mono', monospace;
+}

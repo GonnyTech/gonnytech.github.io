@@ -7,9 +7,28 @@
   <title>Samuele Gonnella - Portfolio</title>
   <meta name="description"
     content="Personal portfolio of Samuele Gonnella, Junior Fullstack Web Developer and Trainee EMT. Showcasing web applications, Android development, and tech stack.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Font -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="stylesheet" href="css/mobile.css">
+  <!-- Theme init: avoids flash of wrong theme -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
 </head>
 
 <body>
@@ -24,11 +43,16 @@
         <li class="nav-item"><a href="index.html" class="active">Home</a></li>
         <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
         <li class="nav-item"><a href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
+          </button>
+        </li>
       </ul>
 
       <!-- Mobile Hamburger Button -->
       <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
-        &#9776;
+        <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
   </header>
@@ -38,7 +62,7 @@
     <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
       <span class="nav-logo" style="font-size: 2.2rem;">Samuele Gonnella</span>
       <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">
-        &#10005;
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
     <ul class="overlay-menu">
@@ -46,6 +70,10 @@
       <li class="overlay-item"><a href="portfolio.html">Portfolio</a></li>
       <li class="overlay-item"><a href="about.html">About</a></li>
     </ul>
+    <button class="overlay-theme-toggle" id="overlay-theme-toggle" aria-label="Toggle light/dark mode">
+      <i class="fa-solid fa-circle-half-stroke" id="overlay-theme-icon"></i>
+      <span id="overlay-theme-label">Switch theme</span>
+    </button>
   </div>
 
   <!-- Main Content -->
@@ -67,7 +95,10 @@
 
     <!-- Projects Section -->
     <section aria-labelledby="projects-heading">
-      <h2 class="section-title" id="projects-heading">Projects I worked on:</h2>
+      <div class="section-header">
+        <span class="section-num">01 &mdash;</span>
+        <h2 class="section-title" id="projects-heading">Projects I worked on</h2>
+      </div>
       <div class="scroll-row">
 
         <!-- Project 1 -->
@@ -127,7 +158,10 @@
 
     <!-- Experiences Section -->
     <section aria-labelledby="experiences-heading">
-      <h2 class="section-title" id="experiences-heading">Work & Study experiences:</h2>
+      <div class="section-header">
+        <span class="section-num">02 &mdash;</span>
+        <h2 class="section-title" id="experiences-heading">Work &amp; Study experiences</h2>
+      </div>
       <div class="scroll-row">
 
         <!-- Experience 1 -->
@@ -165,10 +199,12 @@
 
     <!-- Tech Stack Section -->
     <section aria-labelledby="tech-heading">
-      <h2 class="section-title" id="tech-heading">Technologies I can Work With:</h2>
+      <div class="section-header">
+        <span class="section-num">03 &mdash;</span>
+        <h2 class="section-title" id="tech-heading">Technologies I can Work With</h2>
+      </div>
       <div class="scroll-row">
 
-        <!-- Tech 1 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-java.png" alt="Java logo"
@@ -178,7 +214,6 @@
           <div class="logo-label">Java</div>
         </div>
 
-        <!-- Tech 2 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-php.png" alt="PHP logo"
@@ -188,7 +223,6 @@
           <div class="logo-label">PHP</div>
         </div>
 
-        <!-- Tech 3 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-html.png" alt="HTML logo"
@@ -198,7 +232,6 @@
           <div class="logo-label">HTML</div>
         </div>
 
-        <!-- Tech 4 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-css.png" alt="CSS3 logo"
@@ -208,7 +241,6 @@
           <div class="logo-label">CSS3</div>
         </div>
 
-        <!-- Tech 5 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-javascript.png" alt="JavaScript logo"
@@ -218,7 +250,6 @@
           <div class="logo-label">JavaScript</div>
         </div>
 
-        <!-- Tech 6 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-python.png" alt="Python logo"
@@ -228,7 +259,6 @@
           <div class="logo-label">Python</div>
         </div>
 
-        <!-- Tech 7 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-mysql.png" alt="MySQL logo"
@@ -238,7 +268,6 @@
           <div class="logo-label">MySQL</div>
         </div>
 
-        <!-- Tech 8 -->
         <div class="logo-circle-wrapper">
           <div class="logo-circle">
             <img src="img/logo-linux.png" alt="Linux logo"
@@ -275,7 +304,46 @@
 
   <!-- Scripts -->
   <script>
-    // 1. Hamburger menu toggle
+    // ── Theme toggle ──────────────────────────────────────────────────────────
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const overlayBtn = document.getElementById('overlay-theme-toggle');
+    const overlayIcon = document.getElementById('overlay-theme-icon');
+    const overlayLabel = document.getElementById('overlay-theme-label');
+
+    function isLight() {
+      return html.getAttribute('data-theme') === 'light';
+    }
+
+    function updateThemeUI() {
+      if (isLight()) {
+        themeIcon.className = 'fa-solid fa-moon';
+        overlayIcon.className = 'fa-solid fa-moon';
+        overlayLabel.textContent = 'Dark mode';
+      } else {
+        themeIcon.className = 'fa-solid fa-sun';
+        overlayIcon.className = 'fa-solid fa-sun';
+        overlayLabel.textContent = 'Light mode';
+      }
+    }
+
+    function toggleTheme() {
+      if (isLight()) {
+        html.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+      updateThemeUI();
+    }
+
+    themeBtn.addEventListener('click', toggleTheme);
+    overlayBtn.addEventListener('click', toggleTheme);
+    updateThemeUI();
+
+    // ── Hamburger menu ────────────────────────────────────────────────────────
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const closeOverlayBtn = document.getElementById('close-overlay-btn');
     const navOverlay = document.getElementById('nav-overlay');
@@ -295,11 +363,9 @@
 
     hamburgerBtn.addEventListener('click', openMenu);
     closeOverlayBtn.addEventListener('click', closeMenu);
-    overlayLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+    overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-    // 2. Dynamic project card hrefs
+    // ── Dynamic project card hrefs ────────────────────────────────────────────
     function updateProjectLinks() {
       const isMobile = window.innerWidth < 768;
       document.querySelectorAll('[data-desktop-href][data-mobile-href]')

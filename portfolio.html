@@ -7,9 +7,26 @@
   <title>Samuele Gonnella - Portfolio</title>
   <meta name="description"
     content="Projects worked on by Samuele Gonnella, including the Croce Verde Baggio web portal, Volunteer Diary Android app, Snake Game, and Windows Cleaner.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/def4bd5584.js" crossorigin="anonymous"></script>
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="stylesheet" href="css/mobile.css">
+  <!-- Font -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
 </head>
 
 <body>
@@ -24,11 +41,16 @@
         <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="portfolio.html" class="active">Portfolio</a></li>
         <li class="nav-item"><a href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
+          </button>
+        </li>
       </ul>
 
       <!-- Mobile Hamburger Button -->
       <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
-        &#9776;
+        <i class="fa-solid fa-bars"></i>
       </button>
     </nav>
   </header>
@@ -38,7 +60,7 @@
     <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
       <span class="nav-logo" style="font-size: 2.2rem;">Samuele Gonnella</span>
       <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">
-        &#10005;
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
     <ul class="overlay-menu">
@@ -46,13 +68,17 @@
       <li class="overlay-item"><a href="portfolio.html" class="active">Portfolio</a></li>
       <li class="overlay-item"><a href="about.html">About</a></li>
     </ul>
+    <button class="overlay-theme-toggle" id="overlay-theme-toggle" aria-label="Toggle light/dark mode">
+      <i class="fa-solid fa-circle-half-stroke" id="overlay-theme-icon"></i>
+      <span id="overlay-theme-label">Switch theme</span>
+    </button>
   </div>
 
   <!-- Main Content -->
   <main class="container fade-in">
 
     <div class="portfolio-title-hero">
-      <h1 class="hero-title" style="text-align: center;">Some projects I Worked on</h1>
+      <h1 class="hero-title" style="text-align: center;">Some projects I worked on</h1>
     </div>
 
     <!-- Portfolio Projects Layout -->
@@ -62,7 +88,10 @@
       <a class="card portfolio-card-grid odd portfolio-card-link" id="project-croce-verde" data-desktop-href="#"
         data-mobile-href="project-website.html" href="#">
         <div class="portfolio-text">
-          <h2>Web Portal - Croce Verde Baggio</h2>
+          <div class="section-header" style="margin-top: 0;">
+            <span class="section-num">01 &mdash;</span>
+            <h2 class="section-title">Web Portal - Croce Verde Baggio</h2>
+          </div>
 
           <!-- Desktop Inline Text -->
           <div class="desktop-only">
@@ -74,10 +103,8 @@
               <object>
                 <a href="https://www.croceverdebaggio.it/" target="_blank" rel="noopener" class="btn-style"
                   aria-label="Visit the Croce Verde Baggio website">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
                   Visit Website
-                  <svg class="btn-icon" viewBox="0 0 24 24">
-                    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zm-4 2H5v14h14v-5h2v7H3V3h7v2z" />
-                  </svg>
                 </a>
               </object>
             </div>
@@ -101,7 +128,10 @@
       <a class="card portfolio-card-grid even portfolio-card-link" id="project-diary" data-desktop-href="#"
         data-mobile-href="project-app.html" href="#">
         <div class="portfolio-text">
-          <h2>Volunteer Diary - Croce Verde Baggio</h2>
+          <div class="section-header" style="margin-top: 0;">
+            <span class="section-num">02 &mdash;</span>
+            <h2 class="section-title">Volunteer Diary - Croce Verde Baggio</h2>
+          </div>
 
           <!-- Desktop Inline Text -->
           <div class="desktop-only">
@@ -129,7 +159,10 @@
       <a class="card portfolio-card-grid odd portfolio-card-link" id="project-snake" data-desktop-href="#"
         data-mobile-href="project-snake.html" href="#">
         <div class="portfolio-text">
-          <h2>Snake Game - ITS TTF</h2>
+          <div class="section-header" style="margin-top: 0;">
+            <span class="section-num">03 &mdash;</span>
+            <h2 class="section-title">Snake Game - ITS TTF</h2>
+          </div>
 
           <!-- Desktop Inline Text -->
           <div class="desktop-only">
@@ -157,7 +190,10 @@
       <a class="card portfolio-card-grid even portfolio-card-link" id="project-windows" data-desktop-href="#"
         data-mobile-href="project-winapp.html" href="#">
         <div class="portfolio-text">
-          <h2>Windows Cleaner - personal</h2>
+          <div class="section-header" style="margin-top: 0;">
+            <span class="section-num">04 &mdash;</span>
+            <h2 class="section-title">Windows Cleaner - personal</h2>
+          </div>
 
           <!-- Desktop Inline Text -->
           <div class="desktop-only">
@@ -206,7 +242,44 @@
 
   <!-- Scripts -->
   <script>
-    // 1. Hamburger menu toggle
+    // ── Theme toggle ──────────────────────────────────────────────────────────
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const overlayBtn = document.getElementById('overlay-theme-toggle');
+    const overlayIcon = document.getElementById('overlay-theme-icon');
+    const overlayLabel = document.getElementById('overlay-theme-label');
+
+    function isLight() { return html.getAttribute('data-theme') === 'light'; }
+
+    function updateThemeUI() {
+      if (isLight()) {
+        themeIcon.className = 'fa-solid fa-moon';
+        overlayIcon.className = 'fa-solid fa-moon';
+        overlayLabel.textContent = 'Dark mode';
+      } else {
+        themeIcon.className = 'fa-solid fa-sun';
+        overlayIcon.className = 'fa-solid fa-sun';
+        overlayLabel.textContent = 'Light mode';
+      }
+    }
+
+    function toggleTheme() {
+      if (isLight()) {
+        html.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+      }
+      updateThemeUI();
+    }
+
+    themeBtn.addEventListener('click', toggleTheme);
+    overlayBtn.addEventListener('click', toggleTheme);
+    updateThemeUI();
+
+    // ── Hamburger menu ────────────────────────────────────────────────────────
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const closeOverlayBtn = document.getElementById('close-overlay-btn');
     const navOverlay = document.getElementById('nav-overlay');
@@ -226,11 +299,9 @@
 
     hamburgerBtn.addEventListener('click', openMenu);
     closeOverlayBtn.addEventListener('click', closeMenu);
-    overlayLinks.forEach(link => {
-      link.addEventListener('click', closeMenu);
-    });
+    overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-    // 2. Dynamic project card hrefs & desktop click interceptor
+    // ── Dynamic project card hrefs & desktop click interceptor ───────────────
     function updateProjectLinks() {
       const isMobile = window.innerWidth < 768;
       document.querySelectorAll('[data-desktop-href][data-mobile-href]')
@@ -246,7 +317,6 @@
     document.querySelectorAll('.portfolio-card-link').forEach(card => {
       card.addEventListener('click', (e) => {
         if (window.innerWidth >= 768) {
-          // Check if we clicked a button or interactive child element
           const target = e.target;
           if (!target.closest('a:not(.portfolio-card-link)') && !target.closest('button')) {
             e.preventDefault();

@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuele Gonnella - Croce Verde Baggio Web Portal</title>
   <meta name="description" content="Details about the Croce Verde Baggio web portal project by Samuele Gonnella.">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/def4bd5584.js" crossorigin="anonymous"></script>
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/desktop.css">
   <link rel="stylesheet" href="css/mobile.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
 </head>
+
 <body>
 
   <header>
@@ -18,42 +31,65 @@
         <li class="nav-item"><a href="index.html">Home</a></li>
         <li class="nav-item"><a href="portfolio.html" class="active">Portfolio</a></li>
         <li class="nav-item"><a href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
+          </button>
+        </li>
       </ul>
-      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">&#9776;</button>
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </nav>
   </header>
 
   <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
     <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
       <span class="nav-logo" style="font-size: 2.2rem;">Samuele Gonnella</span>
-      <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">&#10005;</button>
+      <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
     </div>
     <ul class="overlay-menu">
       <li class="overlay-item"><a href="index.html">Home</a></li>
       <li class="overlay-item"><a href="portfolio.html" class="active">Portfolio</a></li>
       <li class="overlay-item"><a href="about.html">About</a></li>
     </ul>
+    <button class="overlay-theme-toggle" id="overlay-theme-toggle" aria-label="Toggle light/dark mode">
+      <i class="fa-solid fa-circle-half-stroke" id="overlay-theme-icon"></i>
+      <span id="overlay-theme-label">Switch theme</span>
+    </button>
   </div>
 
   <main class="container fade-in">
     <section class="project-detail-hero">
       <h1 class="project-detail-title">Croce Verde Baggio Web Portal</h1>
       <div class="project-detail-image-container">
-        <img src="img/cvb-website.jpeg" alt="Croce Verde Baggio web portal screenshot" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <img src="img/cvb-website.jpeg" alt="Croce Verde Baggio web portal screenshot"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
         <div class="img-placeholder" style="display:none;">Croce Verde Web</div>
       </div>
     </section>
 
     <section class="card project-detail-body">
       <p>
-        Institutional web portal for the local EMS station, P.A. Croce Verde Baggio ODV. The project started from a monolithic HTML file and was redesigned into a dynamic PHP-based website with admin pages, backend support and custom responsive styling.
+        Institutional web portal for the local EMS station, P.A. Croce Verde Baggio ODV. The project started from a
+        monolithic HTML file and was redesigned into a dynamic PHP-based website with admin pages, backend support and
+        custom responsive styling.
       </p>
       <p>
-        The goal was to keep the site maintainable for the association while improving accessibility, layout consistency and the overall user experience on both desktop and mobile.
+        The goal was to keep the site maintainable for the association while improving accessibility, layout consistency
+        and the overall user experience on both desktop and mobile.
       </p>
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem;">
-        <a class="btn-style" href="https://www.croceverdebaggio.it/" target="_blank" rel="noopener">Visit Website</a>
-        <a class="btn-secondary-style" href="portfolio.html">Back to Portfolio</a>
+        <a class="btn-style" href="https://www.croceverdebaggio.it/" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          Visit Website
+        </a>
+        <a class="btn-secondary-style" href="portfolio.html">
+          <i class="fa-solid fa-arrow-left"></i>
+          Back to Portfolio
+        </a>
       </div>
     </section>
   </main>
@@ -66,9 +102,7 @@
         <p>Based in Milano, Italy</p>
       </div>
       <div class="footer-contacts-column">
-        <p class="footer-info">
-          <strong>E-mail:</strong> samuelegonnella@etik.com
-        </p>
+        <p class="footer-info"><strong>E-mail:</strong> samuelegonnella@etik.com</p>
       </div>
     </div>
     <div class="footer-copyright">
@@ -78,25 +112,48 @@
   </footer>
 
   <script>
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const overlayBtn = document.getElementById('overlay-theme-toggle');
+    const overlayIcon = document.getElementById('overlay-theme-icon');
+    const overlayLabel = document.getElementById('overlay-theme-label');
+
+    function isLight() { return html.getAttribute('data-theme') === 'light'; }
+
+    function updateThemeUI() {
+      if (isLight()) {
+        themeIcon.className = 'fa-solid fa-moon';
+        overlayIcon.className = 'fa-solid fa-moon';
+        overlayLabel.textContent = 'Dark mode';
+      } else {
+        themeIcon.className = 'fa-solid fa-sun';
+        overlayIcon.className = 'fa-solid fa-sun';
+        overlayLabel.textContent = 'Light mode';
+      }
+    }
+
+    function toggleTheme() {
+      if (isLight()) { html.removeAttribute('data-theme'); localStorage.removeItem('theme'); }
+      else { html.setAttribute('data-theme', 'light'); localStorage.setItem('theme', 'light'); }
+      updateThemeUI();
+    }
+
+    themeBtn.addEventListener('click', toggleTheme);
+    overlayBtn.addEventListener('click', toggleTheme);
+    updateThemeUI();
+
     const hamburgerBtn = document.getElementById('hamburger-btn');
     const closeOverlayBtn = document.getElementById('close-overlay-btn');
     const navOverlay = document.getElementById('nav-overlay');
 
-    function openMenu() {
-      navOverlay.classList.add('open');
-      navOverlay.setAttribute('aria-hidden', 'false');
-      hamburgerBtn.setAttribute('aria-expanded', 'true');
-    }
-
-    function closeMenu() {
-      navOverlay.classList.remove('open');
-      navOverlay.setAttribute('aria-hidden', 'true');
-      hamburgerBtn.setAttribute('aria-expanded', 'false');
-    }
+    function openMenu() { navOverlay.classList.add('open'); navOverlay.setAttribute('aria-hidden', 'false'); hamburgerBtn.setAttribute('aria-expanded', 'true'); }
+    function closeMenu() { navOverlay.classList.remove('open'); navOverlay.setAttribute('aria-hidden', 'true'); hamburgerBtn.setAttribute('aria-expanded', 'false'); }
 
     hamburgerBtn.addEventListener('click', openMenu);
     closeOverlayBtn.addEventListener('click', closeMenu);
   </script>
 
 </body>
+
 </html>
