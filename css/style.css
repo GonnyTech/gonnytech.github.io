@@ -833,3 +833,23 @@ a {
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
 }
+
+.tech-pill {
+  font-size: 0.72rem;
+  font-family: var(--font-body, monospace);
+  padding: 0.2rem 0.55rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--accent-color);
+  /* Usa direttamente il colore d'accento (ambra) */
+  opacity: 0.85;
+  /* Leggermente trasparente per un look elegante */
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.scroll-card:hover .tech-pill {
+  opacity: 1;
+  transform: translateY(-1px);
+}
