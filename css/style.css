@@ -855,3 +855,45 @@ a {
   opacity: 1;
   transform: translateY(-1px);
 }
+/* ============================================================
+   CV REQUEST MODAL STYLES
+   ============================================================ */
+.cv-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+}
+
+.cv-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cv-modal-card {
+  background: var(--card-bg);
+  border: 2px solid var(--text-primary);
+  border-radius: var(--card-radius);
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 6px 6px 0px var(--accent-color);
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-modal-overlay.open .cv-modal-card {
+  transform: translateY(0);
+}

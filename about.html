@@ -123,9 +123,8 @@
 
       <!-- Timeline Container -->
       <div class="timeline-container"
-        style="display: flex; flex-direction: column; gap: 2rem; position: relative; padding-left: 1.5rem; border-left: 2px solid var(--border-hover);">
+        style="display: flex; flex-direction: column; gap: 2.5rem; position: relative; padding-left: 1.5rem; border-left: 2px solid var(--border-hover);">
 
-        <!-- Step 1: SEGE (Curren
         <!-- Step 1: SEGE (Current) -->
         <div class="timeline-item" style="position: relative;">
           <div
@@ -134,22 +133,20 @@
           <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-color); letter-spacing: 0.05em;">2026
             &mdash; PRESENT</span>
           <h3
-            style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0.2rem 0 0.4rem 0;">
-            Junior Full Stack Developer (Intern) &mdash; SEGE s.r.l.</h3>
-            <p class="project-detail-body" style="margin: 0 0 1rem 0; font-size: 0.92rem;">
-              Developing core backend architecture with <strong>PHP</strong> and relational databases structured
-              with <strong>xref tables</strong>. <br>
-              Key project: <strong>118 Emergency Dispatch &amp; Fleet Management Software</strong>
-              covering missions, basic/medical/nursing personnel, patient records, and operational bases.
-              Furthermore, I acquired hands-on compliance expertise in regulated environments, mastering <strong>GxP,
-              GDPR, ALCOA</strong> and <strong>Data Integrity &amp; Availability</strong> principles, alongside the
-              <strong>Audit Trail</strong> system.
-            </p>
-            <p class="project-detail-body" style="margin: 0; font-size: 0.92rem;">
-              I also contributed to software <strong>testing</strong> by building comprehensive test checklists and a robust
-              suite of validation files across various formats and sizes for upload forms and scripts. Additionally, I actively
-              participated in team technical meetings, presenting project updates and discussing architectural decisions.
-            </p>
+            style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0.2rem 0 0.2rem 0;">
+            Junior Full Stack Developer &amp; Tester (Intern) &mdash; SEGE s.r.l.</h3>
+          <p class="project-detail-body" style="margin: 0 0 1rem 0; font-size: 0.92rem;">
+            Developing core backend architecture with <strong>PHP</strong> and relational databases structured
+            with <strong>xref tables</strong>. <br>
+            Key project: <strong>118 Emergency Dispatch &amp; Fleet Management Software</strong>
+            covering missions, basic/medical/nursing personnel, patient records, and operational bases.
+            Furthermore, I acquired hands-on compliance expertise in regulated environments, mastering <strong>GxP,
+            GDPR, ALCOA</strong> and <strong>Data Integrity &amp; Availability</strong> principles, alongside the
+            <strong>Audit Trail</strong> system.
+          </p>
+          <p class="project-detail-body" style="margin: 0; font-size: 0.92rem;">
+            I also contributed to software <strong>testing</strong> by building comprehensive test checklists and a robust suite of validation files across various formats and sizes for upload forms and scripts. Additionally, I actively participated in team technical meetings, presenting project updates and discussing architectural decisions.
+          </p>
         </div>
 
         <!-- Step 2: ITS Tech Talent Factory -->
@@ -199,6 +196,8 @@
             hardware automation with <strong>Arduino</strong> and scripting fundamentals in <strong>Python</strong>.
           </p>
         </div>
+
+      </div>
     </section>
 
     <!-- Let's Keep in Touch Section -->
@@ -211,7 +210,7 @@
         </div>
         <div>
           <div class="section-header" style="margin-top: 0;">
-            <span class="section-num">02 &mdash;</span>
+            <span class="section-num">03 &mdash;</span>
             <h2 class="section-title" id="contact-heading">Let's keep in touch!</h2>
           </div>
           <div style="margin-top: 1.5rem; line-height: 1.9;">
@@ -231,12 +230,6 @@
               My Profile
             </a>
 
-            <!-- Contact Me
-            <a href="contact.html" class="btn-secondary-style" aria-label="Contact Samuele Gonnella">
-              <i class="fa-solid fa-envelope"></i>
-              Contact Me
-            </a> -->
-
             <!-- YouTube -->
             <a href="https://www.youtube.com/@the_tech_cafe" class="btn-secondary-style"
               aria-label="Visit Samuele Gonnella's YouTube Channel">
@@ -251,12 +244,12 @@
               My CV on GitHub
             </a>
 
-            <!-- Download PDF -->
-            <a href="docs/CV.pdf" download class="btn-secondary-style"
+            <!-- Download PDF (Triggers Modal) -->
+            <button id="open-cv-modal-btn" class="btn-secondary-style"
               aria-label="Download Samuele Gonnella's CV in PDF format">
               <i class="fa-solid fa-download"></i>
               Download PDF
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -264,13 +257,39 @@
 
   </main>
 
+  <!-- CV Request Modal Overlay -->
+  <div class="cv-modal-overlay" id="cv-modal" aria-hidden="true">
+    <div class="cv-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary);">Request Curriculum Vitae</h3>
+        <button class="hamburger-btn" id="close-cv-modal-btn" aria-label="Close modal" style="width: 36px; height: 36px; font-size: 0.9rem;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+        Please enter your email or company name to unlock the secure direct download.
+      </p>
+
+      <!-- Form -->
+      <form id="cv-request-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="email" name="email" placeholder="Your email or company..." required
+          style="padding: 0.75rem 1rem; border-radius: 10px; background: var(--bg-primary); border: 2px solid var(--border-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none;">
+
+        <button type="submit" class="btn-style" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-download"></i>
+          Get PDF Now
+        </button>
+      </form>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-brand">
         <div class="footer-logo">Samuele Gonnella</div>
-        <p class="footer-subtitle">Jr. Full Stack Developer - EMT</p>
-        <p>Based in Milano, Italy</p>
+        <p class="footer-subtitle">Jr. Fullstack Developer - EMT</p>
+        <p>Based in Baggio, Milano, Italy</p>
       </div>
       <div class="footer-contacts-column">
         <p class="footer-info">
@@ -344,6 +363,51 @@
     hamburgerBtn.addEventListener('click', openMenu);
     closeOverlayBtn.addEventListener('click', closeMenu);
     overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // ── CV Download Modal Logic ───────────────────────────────────────────────
+    const modal = document.getElementById('cv-modal');
+    const openBtn = document.getElementById('open-cv-modal-btn');
+    const closeBtn = document.getElementById('close-cv-modal-btn');
+    const form = document.getElementById('cv-request-form');
+
+    if (openBtn && modal) {
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+
+    function closeModal() {
+      if (modal) {
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Trigger download of docs/CV.pdf
+        const link = document.createElement('a');
+        link.href = 'docs/CV.pdf';
+        link.download = 'Samuele_Gonnella_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        closeModal();
+        form.reset();
+      });
+    }
   </script>
 
 </body>
