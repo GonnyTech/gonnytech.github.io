@@ -153,7 +153,7 @@
         <a class="scroll-card" data-desktop-href="portfolio.html#project-snake" data-mobile-href="project-snake.html"
           href="portfolio.html#project-snake">
           <div class="scroll-card-img-wrapper">
-            <img src="img/winapp.png" alt="Screenshot of the Snake game"
+            <img src="img/snake.png" alt="Screenshot of the Snake game"
               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="img-placeholder" style="display:none;">Snake Game</div>
           </div>
@@ -418,6 +418,17 @@
     }
     window.addEventListener('load', updateProjectLinks);
     window.addEventListener('resize', updateProjectLinks);
+
+    // ── Mouse wheel horizontal scroll fix for .scroll-row ─────────────────────
+    document.querySelectorAll('.scroll-row').forEach(row => {
+      row.addEventListener('wheel', (e) => {
+        // Se c'è movimento verticale della rotellina, lo convertiamo in orizzontale
+        if (e.deltaY !== 0) {
+          e.preventDefault();
+          row.scrollLeft += e.deltaY;
+        }
+      }, { passive: false });
+    });
   </script>
 
 </body>
