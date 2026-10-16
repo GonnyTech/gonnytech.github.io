@@ -111,18 +111,28 @@
     </section>
 
     <!-- Timeline / Learning Path Section -->
-    <section class="card" style="margin-bottom: 3rem;" aria-labelledby="timeline-heading">
-      <div class="section-header" style="margin-top: 0;">
-        <span class="section-num">02 &mdash;</span>
-        <h2 class="section-title" id="timeline-heading">Timeline &amp; Skills Path</h2>
-      </div>
-      <p class="project-detail-body" style="margin-bottom: 2rem;">
-        A chronological breakdown of my academic path, professional internship, and technical milestones acquired along
-        the way.
-      </p>
+        <section class="card" style="margin-bottom: 3rem;" aria-labelledby="timeline-heading">
+            <div class="section-header" style="margin-top: 0;">
+            <span class="section-num" id="timeline-num-label">02a &mdash;</span>
+            <h2 class="section-title" id="timeline-heading">Timeline &amp; Skills Path</h2>
+            </div>
 
-      <!-- Timeline Container -->
-      <div class="timeline-container"
+            <!-- Pill Buttons Container (Compatto e orizzontale) -->
+            <div style="display: flex; gap: 0.75rem; margin: 1.25rem 0 1.5rem 0; flex-wrap: wrap;">
+            <button id="btn-timeline-it" class="btn-style" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; border-radius: 50px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-code"></i> 02a &mdash; IT Career
+            </button>
+            <button id="btn-timeline-ems" class="btn-secondary-style" style="padding: 0.5rem 1.25rem; font-size: 0.9rem; border-radius: 50px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem;">
+                <i class="fa-solid fa-briefcase-medical"></i> 02b &mdash; EMS Career
+            </button>
+            </div>
+
+            <p class="project-detail-body" id="timeline-desc" style="margin-bottom: 2rem;">
+            A chronological breakdown of my academic path, professional internship, and technical milestones acquired along the way.
+            </p>
+
+      <!-- TIMELINE 02a: IT & ACADEMIC CAREER -->
+      <div id="timeline-it-content" class="timeline-container"
         style="display: flex; flex-direction: column; gap: 2.5rem; position: relative; padding-left: 1.5rem; border-left: 2px solid var(--border-hover);">
 
         <!-- Step 1: SEGE (Current) -->
@@ -198,6 +208,56 @@
         </div>
 
       </div>
+
+      <!-- TIMELINE 02b: CROCE VERDE BAGGIO / EMS (Nascosta di default) -->
+      <div id="timeline-ems-content" class="timeline-container"
+        style="display: none; flex-direction: column; gap: 2.5rem; position: relative; padding-left: 1.5rem; border-left: 2px solid var(--border-hover);">
+
+        <!-- Step 1: Soccorritore (June 2026) -->
+        <div class="timeline-item" style="position: relative;">
+          <div
+            style="position: absolute; left: -1.78rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent-color); border: 2px solid var(--bg-primary);">
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-color); letter-spacing: 0.05em;">JUNE 2026
+            &mdash; PRESENT</span>
+          <h3
+            style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0.2rem 0 0.2rem 0;">
+            Certified Emergency Medical Technician (Soccorritore) &mdash; Croce Verde Baggio ODV</h3>
+          <p class="project-detail-body" style="margin: 0; font-size: 0.92rem;">
+            Completed the second phase of training and certification. Actively operating on emergency ambulance shifts, handling primary patient assessments, trauma protocols, basic life support, and crew coordination in Milan.
+          </p>
+        </div>
+
+        <!-- Step 2: Trainee EMT (December 2025) -->
+        <div class="timeline-item" style="position: relative;">
+          <div
+            style="position: absolute; left: -1.78rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent-color); border: 2px solid var(--bg-primary);">
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-color); letter-spacing: 0.05em;">DECEMBER 2025</span>
+          <h3
+            style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0.2rem 0 0.4rem 0;">
+            Trainee EMT (Soccorritore in Addestramento) &mdash; Croce Verde Baggio ODV</h3>
+          <p class="project-detail-body" style="margin: 0; font-size: 0.92rem;">
+            Successfully passed the first part of the regional emergency medical course, acquiring foundational medical protocols, BLSD certification, and joining operational shifts under supervision.
+          </p>
+        </div>
+
+        <!-- Step 3: Member (May 2025) -->
+        <div class="timeline-item" style="position: relative;">
+          <div
+            style="position: absolute; left: -1.78rem; top: 0.25rem; width: 12px; height: 12px; border-radius: 50%; background-color: var(--accent-color); border: 2px solid var(--bg-primary);">
+          </div>
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-color); letter-spacing: 0.05em;">MAY 2025</span>
+          <h3
+            style="font-size: 1.3rem; font-family: var(--font-heading); color: var(--text-primary); margin: 0.2rem 0 0.4rem 0;">
+            Active Associate Member &mdash; Croce Verde Baggio ODV</h3>
+          <p class="project-detail-body" style="margin: 0; font-size: 0.92rem;">
+            Joined the volunteer association in Milan, participating in community support initiatives, association activities, and preparing for the professional emergency rescue training path.
+          </p>
+        </div>
+
+      </div>
+
     </section>
 
     <!-- Let's Keep in Touch Section -->
@@ -258,183 +318,211 @@
   </main>
 
   <!-- CV Request Modal Overlay -->
-    <div class="cv-modal-overlay" id="cv-modal" aria-hidden="true">
-      <div class="cv-modal-card">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary);">Wait... Are You Human?</h3>
-          <button class="hamburger-btn" id="close-cv-modal-btn" aria-label="Close modal" style="width: 36px; height: 36px; font-size: 0.9rem;">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
+  <div class="cv-modal-overlay" id="cv-modal" aria-hidden="true">
+    <div class="cv-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary);">Wait... Are You Human?</h3>
+        <button class="hamburger-btn" id="close-cv-modal-btn" aria-label="Close modal" style="width: 36px; height: 36px; font-size: 0.9rem;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
 
-        <!-- Aggiunto id="cv-modal-desc" -->
-        <p id="cv-modal-desc" style="font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
-          Please enter your email or company name to verify you are human and unlock the secure direct download.
-          It won't be saved or used for anything, it's just a secure download check.
+      <p id="cv-modal-desc" style="font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+        Please enter your email or company name to verify you are human and unlock the secure direct download.
+        It won't be saved or used for anything, it's just a secure download check.
+      </p>
+
+      <!-- Form -->
+      <form id="cv-request-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="email" name="email" placeholder="Your email or company..." required
+          style="padding: 0.75rem 1rem; border-radius: 10px; background: var(--bg-primary); border: 2px solid var(--border-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none;">
+
+        <button type="submit" class="btn-style" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-download"></i>
+          Get PDF Now
+        </button>
+      </form>
+
+      <!-- Messaggio di ringraziamento -->
+      <div id="cv-success-message" style="display: none; text-align: center; padding: 1.5rem 0;">
+        <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.75rem;"></i>
+        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem;">Thank you!</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+          Verification successful. Your download is starting...<br>
+          <strong style="color: var(--text-primary); font-weight: 500;">Hope to hear from you soon!</strong>
         </p>
-
-        <!-- Form -->
-        <form id="cv-request-form" style="display: flex; flex-direction: column; gap: 1rem;">
-          <input type="email" name="email" placeholder="Your email or company..." required
-            style="padding: 0.75rem 1rem; border-radius: 10px; background: var(--bg-primary); border: 2px solid var(--border-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none;">
-
-          <button type="submit" class="btn-style" style="width: 100%; justify-content: center;">
-            <i class="fa-solid fa-download"></i>
-            Get PDF Now
-          </button>
-        </form>
-
-        <!-- Messaggio di ringraziamento (nascosto di default) -->
-        <div id="cv-success-message" style="display: none; text-align: center; padding: 1.5rem 0;">
-          <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.75rem;"></i>
-          <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem;">Thank you!</h4>
-          <p style="font-size: 0.9rem; color: var(--text-secondary);">Verification successful. Your download is starting...Hope to hear from you soon!</p>
-        </div>
       </div>
     </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <div class="footer-logo">Samuele Gonnella</div>
-          <p class="footer-subtitle">Jr. Fullstack Developer - EMT</p>
-          <p>Based in Baggio, Milano, Italy</p>
-        </div>
-        <div class="footer-contacts-column">
-          <p class="footer-info">
-            <strong>E-mail:</strong> samuelegonnella@etik.com
-          </p>
-        </div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">Samuele Gonnella</div>
+        <p class="footer-subtitle">Jr. Fullstack Developer - EMT</p>
+        <p>Based in Baggio, Milano, Italy</p>
       </div>
-      <div class="footer-copyright">
-        <span>&copy; 2026, Samuele Gonnella | All Rights Reserved.</span>
-        <a href="LICENSE" class="btn-license" aria-label="See License terms">See License</a>
+      <div class="footer-contacts-column">
+        <p class="footer-info">
+          <strong>E-mail:</strong> samuelegonnella@etik.com
+        </p>
       </div>
-    </footer>
+    </div>
+    <div class="footer-copyright">
+      <span>&copy; 2026, Samuele Gonnella | All Rights Reserved.</span>
+      <a href="LICENSE" class="btn-license" aria-label="See License terms">See License</a>
+    </div>
+  </footer>
 
-    <!-- Scripts -->
-    <script>
-      // ── Theme toggle ──────────────────────────────────────────────────────────
-      const html = document.documentElement;
-      const themeBtn = document.getElementById('theme-toggle-btn');
-      const themeIcon = document.getElementById('theme-icon');
-      const overlayBtn = document.getElementById('overlay-theme-toggle');
-      const overlayIcon = document.getElementById('overlay-theme-icon');
-      const overlayLabel = document.getElementById('overlay-theme-label');
+  <!-- Scripts -->
+  <script>
+    // ── Theme toggle ──────────────────────────────────────────────────────────
+    const html = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle-btn');
+    const themeIcon = document.getElementById('theme-icon');
+    const overlayBtn = document.getElementById('overlay-theme-toggle');
+    const overlayIcon = document.getElementById('overlay-theme-icon');
+    const overlayLabel = document.getElementById('overlay-theme-label');
 
-      function isLight() { return html.getAttribute('data-theme') === 'light'; }
+    function isLight() { return html.getAttribute('data-theme') === 'light'; }
 
-      function updateThemeUI() {
-        if (isLight()) {
-          themeIcon.className = 'fa-solid fa-moon';
-          overlayIcon.className = 'fa-solid fa-moon';
-          overlayLabel.textContent = 'Dark mode';
-        } else {
-          themeIcon.className = 'fa-solid fa-sun';
-          overlayIcon.className = 'fa-solid fa-sun';
-          overlayLabel.textContent = 'Light mode';
-        }
+    function updateThemeUI() {
+      if (isLight()) {
+        themeIcon.className = 'fa-solid fa-moon';
+        overlayIcon.className = 'fa-solid fa-moon';
+        overlayLabel.textContent = 'Dark mode';
+      } else {
+        themeIcon.className = 'fa-solid fa-sun';
+        overlayIcon.className = 'fa-solid fa-sun';
+        overlayLabel.textContent = 'Light mode';
       }
+    }
 
-      function toggleTheme() {
-        if (isLight()) {
-          html.removeAttribute('data-theme');
-          localStorage.removeItem('theme');
-        } else {
-          html.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-        }
-        updateThemeUI();
+    function toggleTheme() {
+      if (isLight()) {
+        html.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
       }
-
-      themeBtn.addEventListener('click', toggleTheme);
-      overlayBtn.addEventListener('click', toggleTheme);
       updateThemeUI();
+    }
 
-      // ── Hamburger menu ────────────────────────────────────────────────────────
-      const hamburgerBtn = document.getElementById('hamburger-btn');
-      const closeOverlayBtn = document.getElementById('close-overlay-btn');
-      const navOverlay = document.getElementById('nav-overlay');
-      const overlayLinks = document.querySelectorAll('.overlay-item a');
+    themeBtn.addEventListener('click', toggleTheme);
+    overlayBtn.addEventListener('click', toggleTheme);
+    updateThemeUI();
 
-      function openMenu() {
-        navOverlay.classList.add('open');
-        navOverlay.setAttribute('aria-hidden', 'false');
-        hamburgerBtn.setAttribute('aria-expanded', 'true');
-      }
+    // ── Hamburger menu ────────────────────────────────────────────────────────
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const closeOverlayBtn = document.getElementById('close-overlay-btn');
+    const navOverlay = document.getElementById('nav-overlay');
+    const overlayLinks = document.querySelectorAll('.overlay-item a');
 
-      function closeMenu() {
-        navOverlay.classList.remove('open');
-        navOverlay.setAttribute('aria-hidden', 'true');
-        hamburgerBtn.setAttribute('aria-expanded', 'false');
-      }
+    function openMenu() {
+      navOverlay.classList.add('open');
+      navOverlay.setAttribute('aria-hidden', 'false');
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
 
-      hamburgerBtn.addEventListener('click', openMenu);
-      closeOverlayBtn.addEventListener('click', closeMenu);
-      overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
+    function closeMenu() {
+      navOverlay.classList.remove('open');
+      navOverlay.setAttribute('aria-hidden', 'true');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
 
-      // ── CV Download Modal Logic (Unified & Clean) ─────────────────────────────
-      const modal = document.getElementById('cv-modal');
-      const openBtn = document.getElementById('open-cv-modal-btn');
-      const closeBtn = document.getElementById('close-cv-modal-btn');
-      const form = document.getElementById('cv-request-form');
-      const successMsg = document.getElementById('cv-success-message');
-      const modalDesc = document.getElementById('cv-modal-desc');
+    hamburgerBtn.addEventListener('click', openMenu);
+    closeOverlayBtn.addEventListener('click', closeMenu);
+    overlayLinks.forEach(link => link.addEventListener('click', closeMenu));
 
-      if (openBtn && modal) {
-        openBtn.addEventListener('click', (e) => {
-          e.preventDefault();
-          // Reset visibilità in caso sia stato aperto in precedenza
-          if (form) form.style.display = 'flex';
-          if (modalDesc) modalDesc.style.display = 'block';
-          if (successMsg) successMsg.style.display = 'none';
+    // ── Timeline Toggle Logic (02a vs 02b) ────────────────────────────────────
+    const btnIt = document.getElementById('btn-timeline-it');
+    const btnEms = document.getElementById('btn-timeline-ems');
+    const contentIt = document.getElementById('timeline-it-content');
+    const contentEms = document.getElementById('timeline-ems-content');
+    const numLabel = document.getElementById('timeline-num-label');
+    const timelineDesc = document.getElementById('timeline-desc');
 
-          modal.classList.add('open');
-          modal.setAttribute('aria-hidden', 'false');
-        });
-      }
+    if (btnIt && btnEms) {
+      btnIt.addEventListener('click', () => {
+        // Attiva IT
+        btnIt.className = 'btn-style';
+        btnEms.className = 'btn-secondary-style';
+        contentIt.style.display = 'flex';
+        contentEms.style.display = 'none';
+        numLabel.textContent = '02a \u2014';
+        timelineDesc.textContent = 'A chronological breakdown of my academic path, professional internship, and technical milestones acquired along the way.';
+      });
 
-      function closeModal() {
-        if (modal) {
-          modal.classList.remove('open');
-          modal.setAttribute('aria-hidden', 'true');
-        }
-      }
+      btnEms.addEventListener('click', () => {
+        // Attiva EMS / Croce Verde
+        btnEms.className = 'btn-style';
+        btnIt.className = 'btn-secondary-style';
+        contentEms.style.display = 'flex';
+        contentIt.style.display = 'none';
+        numLabel.textContent = '02b \u2014';
+        timelineDesc.textContent = 'My emergency medical training and operational service history as an EMT with Croce Verde Baggio ODV in Milan.';
+      });
+    }
 
-      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    // ── CV Download Modal Logic ───────────────────────────────────────────────
+    const modal = document.getElementById('cv-modal');
+    const openBtn = document.getElementById('open-cv-modal-btn');
+    const closeBtn = document.getElementById('close-cv-modal-btn');
+    const form = document.getElementById('cv-request-form');
+    const successMsg = document.getElementById('cv-success-message');
+    const modalDesc = document.getElementById('cv-modal-desc');
+
+    if (openBtn && modal) {
+      openBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (form) form.style.display = 'flex';
+        if (modalDesc) modalDesc.style.display = 'block';
+        if (successMsg) successMsg.style.display = 'none';
+
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+
+    function closeModal() {
       if (modal) {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) closeModal();
-        });
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden', 'true');
       }
+    }
 
-      if (form) {
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
 
-          // 1. Nascondi il form e la descrizione, mostra il ringraziamento
-          if (form) form.style.display = 'none';
-          if (modalDesc) modalDesc.style.display = 'none';
-          if (successMsg) successMsg.style.display = 'block';
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-          // 2. Fai partire il download del file PDF
-          const link = document.createElement('a');
-          link.href = 'docs/CV.pdf';
-          link.download = 'Samuele_Gonnella_CV.pdf';
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
+        if (form) form.style.display = 'none';
+        if (modalDesc) modalDesc.style.display = 'none';
+        if (successMsg) successMsg.style.display = 'block';
 
-          // 3. Chiudi automaticamente la modale dopo 2 secondi
-          setTimeout(() => {
-            closeModal();
-            form.reset();
-          }, 2000);
-        });
-      }
-    </script>
+        const link = document.createElement('a');
+        link.href = 'docs/CV.pdf';
+        link.download = 'Samuele_Gonnella_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
 
-  </body>
+        setTimeout(() => {
+          closeModal();
+          form.reset();
+        }, 2000);
+      });
+    }
+  </script>
 
-  </html>
+</body>
+
+</html>
