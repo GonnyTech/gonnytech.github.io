@@ -563,8 +563,11 @@ a {
 }
 
 .logo-circle {
-  border-radius: 50%;
-  background-color: #ffffff;
+  width: 90px;         /* Diametro fisso e pulito */
+  height: 90px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important; /* Forza il cerchio perfetto */
+  background-color: var(--card-bg-hover);
   border: 2px solid var(--border-card);
   display: flex;
   align-items: center;
@@ -575,9 +578,8 @@ a {
   overflow: hidden;
 }
 
-.logo-circle-wrapper:hover .logo-circle {
-  transform: scale(1.08) rotate(4deg);
-  box-shadow: var(--shadow-card-hover);
+[data-theme="light"] .logo-circle {
+  background-color: #ffffff;
 }
 
 .logo-circle img {
