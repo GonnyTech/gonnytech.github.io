@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuele Gonnella - Portfolio</title>
   <meta name="description"
-    content="Projects worked on by Samuele Gonnella, including the Croce Verde Baggio web portal, Volunteer Diary Android app, Snake Game, and Windows Cleaner.">
+    content="Projects worked on by Samuele Gonnella, including Server Guardian, Croce Verde Baggio web portal, Volunteer Diary Android app, Snake Game, and more.">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -304,7 +304,7 @@
           <div class="mobile-only">
             <p>A high-performance custom Rust widget integrating mechanical keyboard Bluetooth battery status into Linux
               Waybar.</p>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem;">
+            <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.8rem;">
               <span class="tech-pill">Rust</span>
               <span class="tech-pill">Linux</span>
               <span class="tech-pill">Bluetooth API</span>
@@ -320,12 +320,63 @@
         </div>
       </a>
 
+      <!-- Project 6: Server Guardian -->
+      <a class="card portfolio-card-grid even portfolio-card-link" id="project-server-guardian" data-desktop-href="#"
+        data-mobile-href="project-server-guardian.html" href="#">
+        <div class="portfolio-text">
+          <div class="section-header" style="margin-top: 0;">
+            <span class="section-num">06 &mdash;</span>
+            <h2 class="section-title">Server Guardian - Linux Server Management</h2>
+          </div>
+
+          <!-- Desktop Inline Text -->
+          <div class="desktop-only">
+            <p>A lightweight, semi-automated Linux server management tool for Ubuntu. Combines a 02:00 AM background cron daemon
+              for system upgrades and smart Docker container updates with a real-time htop-style TUI dashboard. Features natural-language
+              dual-recipient email alerts, locally encrypted credentials, and modular hooks designed for future LLM agentic capabilities.</p>
+            <!-- Tech Pills -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem;">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Docker SDK</span>
+              <span class="tech-pill">Linux TUI</span>
+              <span class="tech-pill">SMTP</span>
+            </div>
+            <div style="margin-top: 1.5rem;">
+              <object>
+                <a href="https://github.com/GonnyTech/ServerManager.git" target="_blank" rel="noopener" class="btn-secondary-style"
+                  aria-label="Visit the project repository">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Visit the repository
+                </a>
+              </object>
+            </div>
+          </div>
+
+          <!-- Mobile Text & Indicator -->
+          <div class="mobile-only">
+            <p>A semi-automated Ubuntu server management tool featuring a background daemon, htop-style TUI, and smart email notifications.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem;">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Docker SDK</span>
+              <span class="tech-pill">Linux TUI</span>
+            </div>
+            <span class="read-more-indicator" style="margin-top: 0.8rem; display: inline-block;">Tap to read more
+              &rarr;</span>
+          </div>
+        </div>
+        <div class="portfolio-image-wrapper">
+          <img src="img/servermanager.png" alt="Server Guardian Dashboard Screenshot"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="img-placeholder" style="display:none;">Server Guardian</div>
+        </div>
+      </a>
+
     </div>
     <div class="footer-copyright">
       <span>&copy; 2026, Samuele Gonnella | All Rights Reserved.</span>
       <a href="LICENSE" class="btn-license" aria-label="See License terms">See License</a>
     </div>
-    </footer>
+  </main>
 
     <!-- Scripts -->
     <script>
