@@ -902,23 +902,14 @@ a {
     HERO QUOTE
    ============================================================ */
 .hero-quote {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: var(--font-body); /* Torna al font lineare e pulito (Inter) */
-  font-style: normal;
-  font-size: 0.98rem;
-  font-weight: 600;
-  color: var(--accent-color);
-  background: var(--card-bg-hover);
-  border: 1px solid var(--border-hover);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  margin: 1.2rem 0;
-  letter-spacing: 0.02em;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.hero-quote i {
-  font-size: 1rem;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 1.2rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-color); /* Una linea sottilissima, non un box */
+    letter-spacing: 0.04em;
+    line-height: 1.5;
 }
