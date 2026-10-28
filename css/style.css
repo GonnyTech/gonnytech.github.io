@@ -897,3 +897,19 @@ a {
 .cv-modal-overlay.open .cv-modal-card {
   transform: translateY(0);
 }
+
+/* ============================================================
+    HERO QUOTE
+   ============================================================ */
+.hero-quote {
+    font-family: var(--font-body);
+    font-style: normal;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin: 1.2rem 0;
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-color); /* Una linea sottilissima, non un box */
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+}

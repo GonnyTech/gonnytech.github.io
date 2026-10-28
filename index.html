@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -86,11 +86,18 @@
         <p class="hero-subtitle">
           21 year-old Junior Full Stack Web Developer and EMT, with strong inclination for Cars,
           Special Vehicles, Healthcare and EMS.
+        </p>
+
+        <!-- Citation Quote Style -->
+        <blockquote class="hero-quote">
+          &ldquo;Coded in the IDE. Tested live on an ambulance. &rdquo;
+        </blockquote>
+
         <div style="margin-top: 1rem; display: flex; align-items: center; gap: 0.5rem; color: var(--text-secondary);">
           <i class="fa-solid fa-location-dot" style="color: var(--accent-color);"></i>
           <span>Baggio, Milan, Italy</span>
         </div>
-        </p>
+
         <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
           <a href="about.html" class="btn-secondary-style">
             <i class="fa-solid fa-user"></i>
@@ -219,8 +226,27 @@
           </div>
         </a>
 
+        <!-- Project 7: Local LLMs on Android -->
+        <a class="scroll-card" data-desktop-href="portfolio.html#project-local-llm"
+          data-mobile-href="project-local-llm.html" href="portfolio.html#project-local-llm">
+          <div class="scroll-card-img-wrapper">
+            <img src="img/local-llm.png" alt="Screenshot of Local LLMs on Android"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="img-placeholder" style="display:none;">Local LLM Android</div>
+          </div>
+          <div class="scroll-card-content">
+            <h3 class="scroll-card-title">Local LLMs on Android - Edge AI</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.8rem;">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Termux</span>
+              <span class="tech-pill">llama.cpp</span>
+            </div>
+          </div>
+        </a>
+
       </div>
     </section>
+
     <!-- Experiences Section -->
     <section aria-labelledby="experiences-heading">
       <div class="section-header">
@@ -284,7 +310,6 @@
               style="font-size: 1.2rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: 1rem;">
               Core &amp; Databases</h3>
           </div>
-          <!-- Griglia interna per le tecnologie: va a capo ordinatamente -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
             <div
               style="display: flex; align-items: center; gap: 0.5rem; background: var(--bg-primary); padding: 0.4rem 0.8rem; border-radius: 8px; border: 1px solid var(--border-card);">
@@ -320,7 +345,6 @@
               style="font-size: 1.2rem; font-family: var(--font-heading); color: var(--text-primary); margin-bottom: 1rem;">
               Interface &amp; Web</h3>
           </div>
-          <!-- Usiamo una CSS Grid con 2 colonne per forzare l'andata a capo ordinata -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
             <div
               style="display: flex; align-items: center; gap: 0.5rem; background: var(--bg-primary); padding: 0.4rem 0.8rem; border-radius: 8px; border: 1px solid var(--border-card);">
@@ -337,7 +361,6 @@
               <i class="fa-brands fa-js" style="font-size: 1.2rem; color: var(--text-primary);"></i>
               <span style="font-size: 0.9rem; font-weight: 500;">JavaScript</span>
             </div>
-            <!-- Dal quarto elemento in poi scendono ordinatamente nella riga sotto -->
             <div
               style="display: flex; align-items: center; gap: 0.5rem; background: var(--bg-primary); padding: 0.4rem 0.8rem; border-radius: 8px; border: 1px solid var(--border-card);">
               <i class="fa-brands fa-node" style="font-size: 1.2rem; color: var(--text-primary);"></i>
@@ -387,7 +410,6 @@
         </div>
       </div>
 
-      </div>
     </section>
   </main>
 
@@ -488,7 +510,6 @@
     // ── Mouse wheel horizontal scroll fix for .scroll-row ─────────────────────
     document.querySelectorAll('.scroll-row').forEach(row => {
       row.addEventListener('wheel', (e) => {
-        // Se c'è movimento verticale della rotellina, lo convertiamo in orizzontale
         if (e.deltaY !== 0) {
           e.preventDefault();
           row.scrollLeft += e.deltaY;
