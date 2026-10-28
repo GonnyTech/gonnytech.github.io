@@ -206,7 +206,7 @@ a {
 
 .nav-item a {
   padding: 0.45rem 1.1rem;
-  border-radius: 10px;
+  border-radius: 5px;
   font-size: 0.9rem;
   font-family: var(--font-body);
   font-weight: 700;
@@ -236,7 +236,7 @@ a {
 .theme-toggle-btn {
   width: 42px;
   height: 42px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: var(--card-bg);
   border: 2px solid var(--text-primary);
   color: var(--text-primary);
@@ -268,7 +268,7 @@ a {
 .hamburger-btn {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: var(--card-bg);
   border: 2px solid var(--text-primary);
   color: var(--text-primary);
@@ -336,7 +336,7 @@ a {
   font-family: var(--font-heading);
   font-weight: 400;
   letter-spacing: 0.05em;
-  border-radius: 14px;
+  border-radius: 5px;
   border: 2px solid var(--text-primary);
   background-color: var(--card-bg);
   color: var(--text-primary);
@@ -670,7 +670,7 @@ a {
 .btn-back {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: 00px;
   background-color: var(--card-bg);
   border: 2px solid var(--text-primary);
   color: var(--text-primary);
@@ -699,7 +699,7 @@ a {
   justify-content: center;
   gap: 0.55rem;
   padding: 0.85rem 1.8rem;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: var(--text-primary);
   color: var(--bg-primary);
   font-family: var(--font-body);
@@ -730,7 +730,7 @@ a {
   justify-content: center;
   gap: 0.55rem;
   padding: 0.85rem 1.8rem;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: var(--card-bg);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -751,7 +751,7 @@ a {
 
 .btn-secondary-style:active {
   transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0px var(--text-primary);
+  box-shadow: 2px 2px 5px var(--text-primary);
 }
 
 .btn-style i,
