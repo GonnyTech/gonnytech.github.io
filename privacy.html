@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuele Gonnella - Portfolio</title>
+  <meta name="description"
+    content="Personal portfolio of Samuele Gonnella, Junior Fullstack Web Developer and Trainee EMT. Showcasing web applications, Android development, and tech stack.">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Font -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/mobile.css">
+  <!-- Theme init: avoids flash of wrong theme -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Header & Navbar -->
+  <header>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a href="index.html" class="nav-logo">Samuele Gonnella</a>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+        <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a href="about.html">About</a></li>
+        <li>
+          <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+            <i class="fa-solid fa-sun" id="theme-icon"></i>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile Hamburger Overlay Menu -->
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true">
+    <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem;">
+      <span class="nav-logo" style="font-size: 2.2rem;">Samuele Gonnella</span>
+      <button class="hamburger-btn" id="close-overlay-btn" aria-label="Close Navigation Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="overlay-menu">
+      <li class="overlay-item"><a href="index.html" class="active">Home</a></li>
+      <li class="overlay-item"><a href="portfolio.html">Portfolio</a></li>
+      <li class="overlay-item"><a href="about.html">About</a></li>
+    </ul>
+    <button class="overlay-theme-toggle" id="overlay-theme-toggle" aria-label="Toggle light/dark mode">
+      <i class="fa-solid fa-circle-half-stroke" id="overlay-theme-icon"></i>
+      <span id="overlay-theme-label">Switch theme</span>
+    </button>
+  </div>
+
+  <!-- Main Content -->
+  <ul class="nav-menu">
+    <li class="nav-item"><a href="index.html">Home</a></li>
+    <li class="nav-item"><a href="portfolio.html">Portfolio</a></li>
+    <li class="nav-item"><a href="about.html">About</a></li>
+    <li>
+      <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle light/dark mode">
+        <i class="fa-solid fa-sun" id="theme-icon"></i>
+      </button>
+    </li>
+  </ul>
+
+  <!-- Mobile Hamburger Button -->
+  <button class="hamburger-btn" id="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</nav>
+
+
+<div class="portfolio-title-hero" style="margin-bottom: 2rem;">
+  <h1 class="hero-title">Privacy Policy</h1>
+  <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">Last updated: October 2026</p>
+</div>
+
+<section class="card" style="margin-bottom: 4rem; line-height: 1.7; display: flex; flex-direction: column; gap: 1.5rem;">
+  
+  <div>
+    <h2 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">1. Data Controller</h2>
+    <p style="color: var(--text-secondary);">
+      The data controller for this website is Samuele Gonnella. You can contact me directly via email at: 
+      <strong style="color: var(--text-primary);">samuelegonnella@etik.com</strong>.
+    </p>
+  </div>
+
+  <div>
+    <h2 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">2. Information Collected &amp; Purpose</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 0.75rem;">
+      This portfolio does not use tracking cookies or aggressive profiling. Personal data is collected only when voluntarily provided by the user:
+    </p>
+    <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.5rem;">
+      <li>
+        <strong style="color: var(--text-primary);">Early Access Requests (BrokeAI):</strong> When you submit your email address via the early access request form, your email is collected exclusively to notify you when the BrokeAI GitHub repository is released to the public. 
+      </li>
+      <li>
+        <strong style="color: var(--text-primary);">Form Processing:</strong> Submission services (such as Formspree) handle email delivery securely. Your data is never sold, shared, or used for commercial marketing purposes.
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">3. Local Storage &amp; Cookies</h2>
+    <p style="color: var(--text-secondary);">
+      This website uses browser <code style="background: var(--bg-primary); padding: 0.2rem 0.4rem; border-radius: 4px; border: 1px solid var(--border-card);">localStorage</code> solely to save your preference regarding the UI theme (dark or light mode). No tracking or advertising cookies are deployed on your device.
+    </p>
+  </div>
+
+  <div>
+    <h2 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem;">4. Your Rights</h2>
+    <p style="color: var(--text-secondary);">
+      In compliance with the GDPR, you have the right to request access to, correction of, or deletion of your personal data at any time. To exercise these rights, simply send an email to <strong style="color: var(--text-primary);">samuelegonnella@etik.com</strong>.
+    </p>
+  </div>
+
+  <div style="margin-top: 1rem;">
+    <a class="btn-secondary-style" href="index.html">
+      <i class="fa-solid fa-arrow-left"></i>
+      Back to Home
+    </a>
+  </div>
+
+</section>
+
+<div class="footer-copyright">
+  <span>&copy; 2026, Samuele Gonnella | All Rights Reserved.</span>
+  <a href="LICENSE" class="btn-license" aria-label="See License terms">See License</a>
+</div>
