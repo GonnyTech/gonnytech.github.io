@@ -75,14 +75,26 @@
     <section class="card project-detail-body">
       <p>
         A lightweight installation script and WebUI designed to run Large Language Models locally on Android smartphones,
-        featuring optimized modern AI engines like llama.cpp and LiteRT alongside a chat-like interface
-        and system resource monitor. Runs on Android via Termux or on standard Linux desktops and laptops.
+        featuring optimized modern AI engines like LiteRT and Wikipedia REST APIs accessible via a chat-like interface
+        and system resource monitor. Runs on Android via Termux and exposes local OpenAI API endpoints for integration with other applications, 
+        such as <a href="https://www.home-assistant.io/" target="_blank" rel="noopener">Home Assistant</a> (via the llama.cpp integration), 
+        <a href="https://useanything.com/" target="_blank" rel="noopener">AnythingLLM</a> and any other agentic platform that supports the OpenAI API. 
+        The project is currently under development and will be released soon.
       </p>
-      <div style="margin-top: 1.5rem;">
-        <span style="font-size: 0.95rem; font-weight: 500; color: var(--accent-color);">
-          <i class="fa-solid fa-clock"></i> Repository available soon!
-        </span>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1.5rem 0;">
+        <span class="tech-pill">Python</span>
+        <span class="tech-pill">Termux</span>
+        <span class="tech-pill">LiteRT</span>
+        <span class="tech-pill">OpenAI API</span>
       </div>
+
+      <div style="margin-top: 1.5rem;">
+        <button id="open-brokeai-modal-btn" class="btn-secondary-style" aria-label="Request early access to GitHub repository">
+          <i class="fa-solid fa-key"></i> Request Early Access
+        </button>
+      </div>
+
       <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem;">
         <a class="btn-secondary-style" href="portfolio.html">
           <i class="fa-solid fa-arrow-left"></i>
@@ -91,6 +103,43 @@
       </div>
     </section>
   </main>
+
+  <!-- BrokeAI Early Access Modal Overlay -->
+  <div class="cv-modal-overlay" id="brokeai-modal" aria-hidden="true">
+    <div class="cv-modal-card">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--text-primary);">Request Early Access</h3>
+        <button class="hamburger-btn" id="close-brokeai-modal-btn" aria-label="Close modal" style="width: 36px; height: 36px; font-size: 0.9rem;">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      
+      <p id="brokeai-modal-desc" style="font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--text-secondary);">
+        Enter your email to request early access to the BrokeAI GitHub repository as soon as it goes public.
+      </p>
+
+      <!-- Form con Formspree -->
+      <form id="brokeai-request-form" action="https://formspree.io/f/xoeeljqy" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="email" name="email" placeholder="Your email..." required
+          style="padding: 0.75rem 1rem; border-radius: 10px; background: var(--bg-primary); border: 2px solid var(--border-card); color: var(--text-primary); font-family: var(--font-body); font-size: 0.9rem; outline: none;">
+
+        <button type="submit" class="btn-style" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-paper-plane"></i>
+          Request Access
+        </button>
+      </form>
+
+      <!-- Messaggio di ringraziamento -->
+      <div id="brokeai-success-message" style="display: none; text-align: center; padding: 1.5rem 0;">
+        <i class="fa-solid fa-circle-check" style="font-size: 2.5rem; color: var(--accent-color); margin-bottom: 0.75rem;"></i>
+        <h4 style="font-family: var(--font-heading); font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem;">Request Received!</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;">
+          Thank you! You'll receive an invite or update as soon as BrokeAI drops.<br>
+          <strong style="color: var(--text-primary); font-weight: 500;">Stay tuned!</strong>
+        </p>
+      </div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="footer-content">
@@ -150,6 +199,54 @@
 
     hamburgerBtn.addEventListener('click', openMenu);
     closeOverlayBtn.addEventListener('click', closeMenu);
+
+    // ── BrokeAI Early Access Modal Logic ──────────────────────────────────────
+    const brokeAiModal = document.getElementById('brokeai-modal');
+    const openBrokeAiBtn = document.getElementById('open-brokeai-modal-btn');
+    const closeBrokeAiBtn = document.getElementById('close-brokeai-modal-btn');
+    const brokeAiForm = document.getElementById('brokeai-request-form');
+    const brokeAiSuccessMsg = document.getElementById('brokeai-success-message');
+    const brokeAiModalDesc = document.getElementById('brokeai-modal-desc');
+
+    if (openBrokeAiBtn && brokeAiModal) {
+      openBrokeAiBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (brokeAiForm) brokeAiForm.style.display = 'flex';
+        if (brokeAiModalDesc) brokeAiModalDesc.style.display = 'block';
+        if (brokeAiSuccessMsg) brokeAiSuccessMsg.style.display = 'none';
+
+        brokeAiModal.classList.add('open');
+        brokeAiModal.setAttribute('aria-hidden', 'false');
+      });
+    }
+
+    function closeBrokeAiModal() {
+      if (brokeAiModal) {
+        brokeAiModal.classList.remove('open');
+        brokeAiModal.setAttribute('aria-hidden', 'true');
+      }
+    }
+
+    if (closeBrokeAiBtn) closeBrokeAiBtn.addEventListener('click', closeBrokeAiModal);
+    if (brokeAiModal) {
+      brokeAiModal.addEventListener('click', (e) => {
+        if (e.target === brokeAiModal) closeBrokeAiModal();
+      });
+    }
+
+    if (brokeAiForm) {
+      brokeAiForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (brokeAiForm) brokeAiForm.style.display = 'none';
+        if (brokeAiModalDesc) brokeAiModalDesc.style.display = 'none';
+        if (brokeAiSuccessMsg) brokeAiSuccessMsg.style.display = 'block';
+
+        setTimeout(() => {
+          closeBrokeAiModal();
+          brokeAiForm.reset();
+        }, 2500);
+      });
+    }
   </script>
 
 </body>
